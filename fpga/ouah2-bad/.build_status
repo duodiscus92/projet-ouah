@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="2" build_time="1685366559">
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1685366559"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1685366560"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1685366562"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1685366544">
+            <Task name="Map" build_result="2" update_result="0" update_time="1685366544"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1685366555">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1685366555"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1685366557"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1685366543">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1685366543"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1685366557"/>
+            <Task name="SynTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="SynVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name="IBIS/Ouah_Ouah2.ibs" last_build_time="1685366560" last_build_size="54982"/>
+        <Report name="Ouah_Ouah2.bgn" last_build_time="1685366559" last_build_size="1041"/>
+        <Report name="Ouah_Ouah2.bin" last_build_time="1685366559" last_build_size="104156"/>
+        <Report name="Ouah_Ouah2.lsedata" last_build_time="0" last_build_size="0"/>
+        <Report name="Ouah_Ouah2.twr.html" last_build_time="1685366557" last_build_size="13038"/>
+        <Report name="Ouah_Ouah2.udb" last_build_time="1685366555" last_build_size="26316"/>
+        <Report name="Ouah_Ouah2_map.udb" last_build_time="1685366544" last_build_size="16771"/>
+        <Report name="Ouah_Ouah2_rtl.udb" last_build_time="1685366542" last_build_size="13209"/>
+        <Report name="Ouah_Ouah2_syn.udb" last_build_time="1685366543" last_build_size="9665"/>
+        <Report name="Ouah_Ouah2_vo.sdf" last_build_time="1685366562" last_build_size="113073"/>
+        <Report name="Ouah_Ouah2_vo.vo" last_build_time="1685366562" last_build_size="126530"/>
+    </Strategy>
+</BuildStatus>
+                                  

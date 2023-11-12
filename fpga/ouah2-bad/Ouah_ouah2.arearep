@@ -1,0 +1,13 @@
+----------------------------------------------------------------------
+Report for cell ouah.TECH
+Register bits:  104 of 5280 (1.970%)
+I/O cells:      22
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2        23          100.0
+                            FD1P3XZ       104          100.0
+                                 IB         3          100.0
+                              IOL_B         5          100.0
+                               LUT4        76          100.0
+                                 OB        19          100.0
+                              TOTAL       230

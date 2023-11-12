@@ -1,0 +1,46 @@
+Paris
+TZ=CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00
+       |     |  | | |  |         | | |  |3heures (du matin)
+       |     |  | | |  |         | | |dimanche
+       |     |  | | |  |         | |5ième    
+       |     |  | | |  |         |Octobre
+       |     |  | | |  |         
+       |     |  | | |  |2heures (du matin)
+       |     |  | | |dimanche
+       |     |  | |5ième
+       |     |  |Mars
+       |     |decalage de 2 heures en été
+       |décalage d'une heure en hiver, negatif à l'est de Greenwitch, positif à l'ouest (ex : USA)
+
+
+std offset dst [offset],start[/time],end[/time]
+
+The initial std and offset specify the standard time zone, as described above. The dst string and offset are the abbreviation and offset for the corresponding Daylight Saving Time zone; if the offset is omitted, it defaults to one hour ahead of standard time.
+
+The remainder of the specification describes when Daylight Saving Time is in effect. The start field is when Daylight Saving Time goes into effect and the end field is when the change is made back to standard time. The following formats are recognized for these fields:
+
+Jn
+n
+
+    This specifies the Julian day, with n between 0 and 365. February 29 is counted in leap years.
+Mm.w.d
+
+    This specifies day d of week w of month m. The day d must be between 0 (Sunday) and 6. The week w must be between 1 and 5; week 1 is the first week in which day d occurs, and week 5 specifies the last d day in the month. The month m should be between 1 and 12. 
+
+The time fields specify when, in the local time currently in effect, the change to the other time occurs. If omitted, the default is 02:00:00. The hours part of the time fields can range from -167 through 167; this is an extension to POSIX.1, which allows only the range 0 through 24.
+
+Here are some example TZ values, including the appropriate Daylight Saving Time and its dates of applicability. In North American Eastern Standard Time (EST) and Eastern Daylight Time (EDT), the normal offset from UTC is 5 hours; since this is west of the prime meridian, the sign is positive. Summer time begins on March’s second Sunday at 2:00am, and ends on November’s first Sunday at 2:00am.
+
+EST+5EDT,M3.2.0/2,M11.1.0/2
+
+Israel Standard Time (IST) and Israel Daylight Time (IDT) are 2 hours ahead of the prime meridian in winter, springing forward an hour on March’s fourth Thursday at 26:00 (i.e., 02:00 on the first Friday on or after March 23), and falling back on October’s last Sunday at 02:00.
+
+IST-2IDT,M3.4.4/26,M10.5.0
+
+Western Argentina Summer Time (WARST) is 3 hours behind the prime meridian all year. There is a dummy fall-back transition on December 31 at 25:00 daylight saving time (i.e., 24:00 standard time, equivalent to January 1 at 00:00 standard time), and a simultaneous spring-forward transition on January 1 at 00:00 standard time, so daylight saving time is in effect all year and the initial WART is a placeholder.
+
+WART4WARST,J1/0,J365/25
+
+Western Greenland Time (WGT) and Western Greenland Summer Time (WGST) are 3 hours behind UTC in the winter. Its clocks follow the European Union rules of springing forward by one hour on March’s last Sunday at 01:00 UTC (-02:00 local time) and falling back on October’s last Sunday at 01:00 UTC (-01:00 local time).
+
+WGT3WGST,M3.5.0/-2,M10.5.0/-

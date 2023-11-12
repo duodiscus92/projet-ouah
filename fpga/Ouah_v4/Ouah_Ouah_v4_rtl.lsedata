@@ -1,0 +1,20 @@
+<top name = "ouah"  library = "work"  arch = "RTL"  entry = "VHDL">
+
+<clocks>
+    <clockitem name = "clk"  type = "port" />
+    <clockitem name = "ms"  type = "net" />
+    <clockitem name = "syncdcf77"  type = "net" />
+    <clockitem name = "databit_N_260"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 4
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+</top>

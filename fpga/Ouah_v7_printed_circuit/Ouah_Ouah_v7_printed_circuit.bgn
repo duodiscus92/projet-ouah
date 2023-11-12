@@ -1,0 +1,26 @@
+BITGEN: Bitstream Generator Radiant Software (64-bit) 3.2.0.18.0
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Aug  6 08:51:59 2023
+
+
+Command: bitgen -w -freq 0 -gui Ouah_Ouah_v7_printed_circuit.udb 
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "C:\Users\duodi\Documents\Personnel\electronique\fpga-cpld\lattice\Ouah\Ouah_v7_printed_circuit\Ouah_Ouah_v7_printed_circuit.bin".
+INFO - Bitstream authenticated.
+Bitstream generation complete!

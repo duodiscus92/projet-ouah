@@ -1,0 +1,5392 @@
+
+// Verilog netlist produced by program backanno, Version Radiant Software (64-bit) 3.2.0.18.0
+
+// backanno -o Ouah_Ouah_v8_w_cet_cest_vo.vo -sp High-Performance_1.2V -w -neg -gui Ouah_Ouah_v8_w_cet_cest.udb 
+// Netlist created on Wed Oct 25 18:55:20 2023
+// Netlist written on Wed Oct 25 18:55:31 2023
+// Design is for device iCE40UP5K
+// Design is for package SG48
+// Design is for performance grade High-Performance_1.2V
+
+`timescale 1 ns / 1 ps
+
+module ouah ( dcf77, rst, clk, cest, cet, ledday, select7seg, segment, sframe, 
+              sdcf77, pinms );
+  input  dcf77, rst, clk;
+  output cest, cet;
+  output [6:0] ledday;
+  output [7:0] select7seg;
+  output [6:0] segment;
+  output sframe, sdcf77, pinms;
+  wire   n3707, \usecond_cntr[8] , n2403, \usecond_cntr[7] , n58, n57, n2405, 
+         n3629, \msecond_cntr[4] , n2443, \msecond_cntr[3] , n77_adj_21, 
+         n76_adj_20, n2445, n3626, \msecond_cntr[2] , n2441, \msecond_cntr[1] , 
+         n79_adj_23, n78_adj_22, n3623, \msecond_cntr[0] , VCC_net, n80, n3665, 
+         \cnt200[8] , n2437, \cnt200[7] , n43, n42, n3662, \cnt200[6] , n2435, 
+         \cnt200[5] , n45, n44, n3659, \cnt200[4] , n2433, \cnt200[3] , n47, 
+         n46, n3656, \cnt200[2] , n2431, \cnt200[1] , n49, n48, n3653, n9, n50, 
+         n3695, n2428, \cnt1500[19] , n86, n3692, \cnt1500[18] , n2426, 
+         \cnt1500[17] , n88, n87, n3689, \cnt1500[16] , n2424, \cnt1500[15] , 
+         n90, n89, n3686, \cnt1500[14] , n2422, \cnt1500[13] , n92, n91, n3683, 
+         \cnt1500[12] , n2420, \cnt1500[11] , n94, n93, n3680, \cnt1500[10] , 
+         n2418, \cnt1500[9] , n96, n95, n3677, \cnt1500[8] , n2416, 
+         \cnt1500[7] , n98, n97, n3698, \usecond_cntr[2] , n2397, 
+         \usecond_cntr[1] , n64, n63, n2399, n3713, n2407, \usecond_cntr[11] , 
+         n54, n3674, \cnt1500[6] , n2414, \cnt1500[5] , n100, n99, n3671, 
+         \cnt1500[4] , n2412, \cnt1500[3] , n102, n101, n3668, \cnt1500[2] , 
+         n2410, n19, n104, n103, n3650, n20, n105, n3701, \usecond_cntr[4] , 
+         \usecond_cntr[3] , n62, n61, n2401, n3647, \usecond_cntr[0] , n65_2, 
+         n3644, \msecond_cntr[14] , n2453, \msecond_cntr[13] , n67_2, n66, 
+         n3641, \msecond_cntr[12] , n2451, \msecond_cntr[11] , n69_adj_13, 
+         n68_adj_12, n3704, \usecond_cntr[6] , \usecond_cntr[5] , n60, n59, 
+         n3710, \usecond_cntr[10] , pinms_c, n56, n55, n3638, 
+         \msecond_cntr[10] , n2449, \msecond_cntr[9] , n71_adj_15, n70_adj_14, 
+         n3635, \msecond_cntr[8] , n2447, \msecond_cntr[7] , n73_adj_17, 
+         n72_adj_16, n3632, \msecond_cntr[6] , \msecond_cntr[5] , n75_adj_19, 
+         n74_adj_18, \shiftreg[18].sig_002.FeedThruLUT , 
+         \shiftreg[17].sig_000.FeedThruLUT , \shiftreg[18] , \shiftreg[17] , 
+         n1036, \daylight_saving[0] , \daylight_saving[1] , 
+         \shiftreg[19].sig_085.FeedThruLUT , 
+         \shiftreg[18].sig_001.FeedThruLUT , \shiftreg[19] , rst_N_320, 
+         sdcf77_c, \shiftreg[22].sig_047.FeedThruLUT , 
+         \shiftreg[21].sig_004.FeedThruLUT , \shiftreg[22] , \shiftreg[21] , 
+         \memreg[21] , \memreg[22] , \n987.sig_016.FeedThruLUT , 
+         \n980.sig_005.FeedThruLUT , n987, n980, n986, n33, 
+         tick_cntr_max_N_319, \tick_cntr[4] , \tick_cntr[3] , tick_cntr_max, 
+         n2379, n2926, \tick_cntr[0] , \tick_cntr[2] , clk_c, n83, 
+         msecond_cntr_max_N_324, msecond_cntr_max, n12_adj_2, n2797, 
+         msecond_cntr_14__N_183, \shiftreg[30].sig_008.FeedThruLUT , 
+         \shiftreg[31].sig_006.FeedThruLUT , \shiftreg[30] , \shiftreg[31] , 
+         \shiftreg[29] , \shiftreg[42].sig_009.FeedThruLUT , 
+         \shiftreg[43].sig_007.FeedThruLUT , \shiftreg[42] , \shiftreg[43] , 
+         \dow[1] , \dow[0] , n85_2, n84, n87_adj_25, n86_adj_24, n89_adj_27, 
+         n88_adj_26, n91_adj_29, n90_adj_28, n93_adj_31, n92_adj_30, 
+         n95_adj_33, n94_adj_32, n97_adj_35, n96_adj_34, n78, n79, 
+         usecond_cntr_max, n36, n2549, \tick_cntr[1] , n127, n54_adj_3, n53_2, 
+         n126, n61_adj_10, n56_adj_5, n55_adj_4, n58_adj_7, n57_adj_6, 
+         n60_adj_9, n59_adj_8, n109, n108, n111, n110, n113, n112, n115, n114, 
+         n117, n116, n119, n118, n121, n120, n123, n122, n125, n124, n35, n34, 
+         n68, n71, n69, n73, n72, n75, n74, n77, n76, 
+         \n982.sig_011.FeedThruLUT , \n981.sig_010.FeedThruLUT , n982, n981, 
+         \n984.sig_013.FeedThruLUT , \n983.sig_012.FeedThruLUT , n984, n983, 
+         \n986.sig_015.FeedThruLUT , \n985.sig_014.FeedThruLUT , n985, 
+         \shiftreg[56].sig_018.FeedThruLUT , 
+         \shiftreg[57].sig_017.FeedThruLUT , \shiftreg[56] , \shiftreg[57] , 
+         \memreg[57] , \memreg[56] , \shiftreg[54].sig_020.FeedThruLUT , 
+         \shiftreg[55].sig_019.FeedThruLUT , \shiftreg[54] , \shiftreg[55] , 
+         \memreg[55] , \memreg[54] , \shiftreg[52].sig_022.FeedThruLUT , 
+         \shiftreg[53].sig_021.FeedThruLUT , \shiftreg[52] , \shiftreg[53] , 
+         \memreg[53] , \memreg[52] , \shiftreg[50].sig_024.FeedThruLUT , 
+         \shiftreg[51].sig_023.FeedThruLUT , \shiftreg[50] , \shiftreg[51] , 
+         \memreg[51] , \memreg[50] , \shiftreg[48].sig_026.FeedThruLUT , 
+         \shiftreg[49].sig_025.FeedThruLUT , \shiftreg[48] , \shiftreg[49] , 
+         \memreg[49] , \memreg[48] , \shiftreg[46].sig_028.FeedThruLUT , 
+         \shiftreg[47].sig_027.FeedThruLUT , \shiftreg[46] , \shiftreg[47] , 
+         \memreg[47] , \memreg[46] , \shiftreg[41].sig_030.FeedThruLUT , 
+         \shiftreg[45].sig_029.FeedThruLUT , \shiftreg[41] , \shiftreg[45] , 
+         \memreg[45] , \memreg[41] , \shiftreg[39].sig_032.FeedThruLUT , 
+         \shiftreg[40].sig_031.FeedThruLUT , \shiftreg[39] , \shiftreg[40] , 
+         \memreg[40] , \memreg[39] , \shiftreg[37].sig_034.FeedThruLUT , 
+         \shiftreg[38].sig_033.FeedThruLUT , \shiftreg[37] , \shiftreg[38] , 
+         \memreg[38] , \memreg[37] , \shiftreg[34].sig_036.FeedThruLUT , 
+         \shiftreg[36].sig_035.FeedThruLUT , \shiftreg[34] , \shiftreg[36] , 
+         \memreg[36] , \memreg[34] , \shiftreg[32].sig_038.FeedThruLUT , 
+         \shiftreg[33].sig_037.FeedThruLUT , \shiftreg[32] , \shiftreg[33] , 
+         \memreg[33] , \memreg[32] , \shiftreg[30].sig_040.FeedThruLUT , 
+         \shiftreg[31].sig_039.FeedThruLUT , \memreg[31] , \memreg[30] , 
+         \shiftreg[27].sig_042.FeedThruLUT , 
+         \shiftreg[29].sig_041.FeedThruLUT , \shiftreg[27] , \memreg[29] , 
+         \memreg[27] , \shiftreg[25].sig_044.FeedThruLUT , 
+         \shiftreg[26].sig_043.FeedThruLUT , \shiftreg[25] , \shiftreg[26] , 
+         \memreg[26] , \memreg[25] , \shiftreg[23].sig_046.FeedThruLUT , 
+         \shiftreg[24].sig_045.FeedThruLUT , \shiftreg[23] , \shiftreg[24] , 
+         \memreg[24] , \memreg[23] , \databit.sig_048.FeedThruLUT , databit, 
+         \shiftreg[56].sig_050.FeedThruLUT , 
+         \shiftreg[57].sig_049.FeedThruLUT , databit_N_332, n4, 
+         \shiftreg[54].sig_052.FeedThruLUT , 
+         \shiftreg[55].sig_051.FeedThruLUT , 
+         \shiftreg[52].sig_054.FeedThruLUT , 
+         \shiftreg[53].sig_053.FeedThruLUT , 
+         \shiftreg[50].sig_056.FeedThruLUT , 
+         \shiftreg[51].sig_055.FeedThruLUT , 
+         \shiftreg[48].sig_058.FeedThruLUT , 
+         \shiftreg[49].sig_057.FeedThruLUT , 
+         \shiftreg[46].sig_060.FeedThruLUT , 
+         \shiftreg[47].sig_059.FeedThruLUT , 
+         \shiftreg[44].sig_062.FeedThruLUT , 
+         \shiftreg[45].sig_061.FeedThruLUT , \shiftreg[44] , 
+         \shiftreg[42].sig_064.FeedThruLUT , 
+         \shiftreg[43].sig_063.FeedThruLUT , 
+         \shiftreg[40].sig_066.FeedThruLUT , 
+         \shiftreg[41].sig_065.FeedThruLUT , 
+         \shiftreg[38].sig_068.FeedThruLUT , 
+         \shiftreg[39].sig_067.FeedThruLUT , 
+         \shiftreg[36].sig_070.FeedThruLUT , 
+         \shiftreg[37].sig_069.FeedThruLUT , \shiftreg[35] , 
+         \shiftreg[34].sig_072.FeedThruLUT , 
+         \shiftreg[35].sig_071.FeedThruLUT , 
+         \shiftreg[32].sig_074.FeedThruLUT , 
+         \shiftreg[33].sig_073.FeedThruLUT , 
+         \shiftreg[28].sig_076.FeedThruLUT , 
+         \shiftreg[29].sig_075.FeedThruLUT , \shiftreg[28] , 
+         \shiftreg[26].sig_078.FeedThruLUT , 
+         \shiftreg[27].sig_077.FeedThruLUT , 
+         \shiftreg[24].sig_080.FeedThruLUT , 
+         \shiftreg[25].sig_079.FeedThruLUT , 
+         \shiftreg[22].sig_082.FeedThruLUT , 
+         \shiftreg[23].sig_081.FeedThruLUT , 
+         \shiftreg[20].sig_084.FeedThruLUT , 
+         \shiftreg[21].sig_083.FeedThruLUT , \shiftreg[20] , \bcd[0] , 
+         \bcd[2] , \bcd[1] , \bcd[3] , n3332, n1370, n1600, segment_c_4, n1602, 
+         n3060, n3062, n3371, n3057, n3338, n1369, n1240, n1342, n1144, n3368, 
+         n1613, dm2y, n3362, n3054, n3344, n3356, n3350, n3090, segment_c_6, 
+         n1221, n3089, dm2y_N_335, n6, n70, n2938, n2940, n2944, n12_adj_36, 
+         n13, n3074, n1343, n2936, n27, n1346, n12, n2648, n1744, n22, n2660, 
+         start_frame_N_329, n14_adj_11, n10, n2932, n14, n2645, n10_adj_1, 
+         n1742, select7seg_c_2, select7seg_c_1, n1322, n2948, n2934, n25, 
+         select7seg_c_3, select7seg_c_4, segment_c_1, segment_c_5, segment_c_0, 
+         segment_c_2, segment_c_3, rst_c, \dow[2] , ledday_c_0, ledday_c_2, 
+         ledday_c_5, ledday_c_1, ledday_c_6, ledday_c_4, 
+         \start_frame_N_329$n0 , sframe_c, select7seg_c_5, select7seg_c_6, 
+         cet_c, cest_c, usecond_cntr_max_N_322, 
+         \shiftreg[44].sig_003.FeedThruLUT , ledday_c_3, select7seg_c_7, 
+         select7seg_c_0, dcf77_c;
+
+  SLICE_0 SLICE_0( .D1(n3707), .C1(\usecond_cntr[8] ), .D0(n2403), 
+    .C0(\usecond_cntr[7] ), .CIN0(n2403), .CIN1(n3707), .F0(n58), .F1(n57), 
+    .COUT1(n2405), .COUT0(n3707));
+  SLICE_1 SLICE_1( .D1(n3629), .C1(\msecond_cntr[4] ), .D0(n2443), 
+    .C0(\msecond_cntr[3] ), .CIN0(n2443), .CIN1(n3629), .F0(n77_adj_21), 
+    .F1(n76_adj_20), .COUT1(n2445), .COUT0(n3629));
+  SLICE_2 SLICE_2( .D1(n3626), .C1(\msecond_cntr[2] ), .D0(n2441), 
+    .C0(\msecond_cntr[1] ), .CIN0(n2441), .CIN1(n3626), .F0(n79_adj_23), 
+    .F1(n78_adj_22), .COUT1(n2443), .COUT0(n3626));
+  SLICE_3 SLICE_3( .D1(n3623), .C1(\msecond_cntr[0] ), .B1(VCC_net), 
+    .CIN1(n3623), .F1(n80), .COUT1(n2441), .COUT0(n3623));
+  SLICE_4 SLICE_4( .D1(n3665), .C1(\cnt200[8] ), .D0(n2437), .C0(\cnt200[7] ), 
+    .CIN0(n2437), .CIN1(n3665), .F0(n43), .F1(n42), .COUT0(n3665));
+  SLICE_5 SLICE_5( .D1(n3662), .C1(\cnt200[6] ), .D0(n2435), .C0(\cnt200[5] ), 
+    .CIN0(n2435), .CIN1(n3662), .F0(n45), .F1(n44), .COUT1(n2437), 
+    .COUT0(n3662));
+  SLICE_6 SLICE_6( .D1(n3659), .C1(\cnt200[4] ), .D0(n2433), .C0(\cnt200[3] ), 
+    .CIN0(n2433), .CIN1(n3659), .F0(n47), .F1(n46), .COUT1(n2435), 
+    .COUT0(n3659));
+  SLICE_7 SLICE_7( .D1(n3656), .C1(\cnt200[2] ), .D0(n2431), .C0(\cnt200[1] ), 
+    .CIN0(n2431), .CIN1(n3656), .F0(n49), .F1(n48), .COUT1(n2433), 
+    .COUT0(n3656));
+  SLICE_8 SLICE_8( .D1(n3653), .C1(n9), .B1(VCC_net), .CIN1(n3653), .F1(n50), 
+    .COUT1(n2431), .COUT0(n3653));
+  SLICE_9 SLICE_9( .D1(n3695), .D0(n2428), .C0(\cnt1500[19] ), .CIN0(n2428), 
+    .CIN1(n3695), .F0(n86), .COUT0(n3695));
+  SLICE_10 SLICE_10( .D1(n3692), .C1(\cnt1500[18] ), .D0(n2426), 
+    .C0(\cnt1500[17] ), .CIN0(n2426), .CIN1(n3692), .F0(n88), .F1(n87), 
+    .COUT1(n2428), .COUT0(n3692));
+  SLICE_11 SLICE_11( .D1(n3689), .C1(\cnt1500[16] ), .D0(n2424), 
+    .C0(\cnt1500[15] ), .CIN0(n2424), .CIN1(n3689), .F0(n90), .F1(n89), 
+    .COUT1(n2426), .COUT0(n3689));
+  SLICE_12 SLICE_12( .D1(n3686), .C1(\cnt1500[14] ), .D0(n2422), 
+    .C0(\cnt1500[13] ), .CIN0(n2422), .CIN1(n3686), .F0(n92), .F1(n91), 
+    .COUT1(n2424), .COUT0(n3686));
+  SLICE_13 SLICE_13( .D1(n3683), .C1(\cnt1500[12] ), .D0(n2420), 
+    .C0(\cnt1500[11] ), .CIN0(n2420), .CIN1(n3683), .F0(n94), .F1(n93), 
+    .COUT1(n2422), .COUT0(n3683));
+  SLICE_14 SLICE_14( .D1(n3680), .C1(\cnt1500[10] ), .D0(n2418), 
+    .C0(\cnt1500[9] ), .CIN0(n2418), .CIN1(n3680), .F0(n96), .F1(n95), 
+    .COUT1(n2420), .COUT0(n3680));
+  SLICE_15 SLICE_15( .D1(n3677), .C1(\cnt1500[8] ), .D0(n2416), 
+    .C0(\cnt1500[7] ), .CIN0(n2416), .CIN1(n3677), .F0(n98), .F1(n97), 
+    .COUT1(n2418), .COUT0(n3677));
+  SLICE_16 SLICE_16( .D1(n3698), .C1(\usecond_cntr[2] ), .D0(n2397), 
+    .C0(\usecond_cntr[1] ), .CIN0(n2397), .CIN1(n3698), .F0(n64), .F1(n63), 
+    .COUT1(n2399), .COUT0(n3698));
+  SLICE_17 SLICE_17( .D1(n3713), .D0(n2407), .C0(\usecond_cntr[11] ), 
+    .CIN0(n2407), .CIN1(n3713), .F0(n54), .COUT0(n3713));
+  SLICE_18 SLICE_18( .D1(n3674), .C1(\cnt1500[6] ), .D0(n2414), 
+    .C0(\cnt1500[5] ), .CIN0(n2414), .CIN1(n3674), .F0(n100), .F1(n99), 
+    .COUT1(n2416), .COUT0(n3674));
+  SLICE_19 SLICE_19( .D1(n3671), .C1(\cnt1500[4] ), .D0(n2412), 
+    .C0(\cnt1500[3] ), .CIN0(n2412), .CIN1(n3671), .F0(n102), .F1(n101), 
+    .COUT1(n2414), .COUT0(n3671));
+  SLICE_20 SLICE_20( .D1(n3668), .C1(\cnt1500[2] ), .D0(n2410), .C0(n19), 
+    .CIN0(n2410), .CIN1(n3668), .F0(n104), .F1(n103), .COUT1(n2412), 
+    .COUT0(n3668));
+  SLICE_21 SLICE_21( .D1(n3650), .C1(n20), .B1(VCC_net), .CIN1(n3650), 
+    .F1(n105), .COUT1(n2410), .COUT0(n3650));
+  SLICE_22 SLICE_22( .D1(n3701), .C1(\usecond_cntr[4] ), .D0(n2399), 
+    .C0(\usecond_cntr[3] ), .CIN0(n2399), .CIN1(n3701), .F0(n62), .F1(n61), 
+    .COUT1(n2401), .COUT0(n3701));
+  SLICE_23 SLICE_23( .D1(n3647), .C1(\usecond_cntr[0] ), .B1(VCC_net), 
+    .CIN1(n3647), .F1(n65_2), .COUT1(n2397), .COUT0(n3647));
+  SLICE_24 SLICE_24( .D1(n3644), .C1(\msecond_cntr[14] ), .D0(n2453), 
+    .C0(\msecond_cntr[13] ), .CIN0(n2453), .CIN1(n3644), .F0(n67_2), .F1(n66), 
+    .COUT0(n3644));
+  SLICE_25 SLICE_25( .D1(n3641), .C1(\msecond_cntr[12] ), .D0(n2451), 
+    .C0(\msecond_cntr[11] ), .CIN0(n2451), .CIN1(n3641), .F0(n69_adj_13), 
+    .F1(n68_adj_12), .COUT1(n2453), .COUT0(n3641));
+  SLICE_26 SLICE_26( .D1(n3704), .C1(\usecond_cntr[6] ), .D0(n2401), 
+    .C0(\usecond_cntr[5] ), .CIN0(n2401), .CIN1(n3704), .F0(n60), .F1(n59), 
+    .COUT1(n2403), .COUT0(n3704));
+  SLICE_27 SLICE_27( .D1(n3710), .C1(\usecond_cntr[10] ), .D0(n2405), 
+    .C0(pinms_c), .CIN0(n2405), .CIN1(n3710), .F0(n56), .F1(n55), 
+    .COUT1(n2407), .COUT0(n3710));
+  SLICE_28 SLICE_28( .D1(n3638), .C1(\msecond_cntr[10] ), .D0(n2449), 
+    .C0(\msecond_cntr[9] ), .CIN0(n2449), .CIN1(n3638), .F0(n71_adj_15), 
+    .F1(n70_adj_14), .COUT1(n2451), .COUT0(n3638));
+  SLICE_29 SLICE_29( .D1(n3635), .C1(\msecond_cntr[8] ), .D0(n2447), 
+    .C0(\msecond_cntr[7] ), .CIN0(n2447), .CIN1(n3635), .F0(n73_adj_17), 
+    .F1(n72_adj_16), .COUT1(n2449), .COUT0(n3635));
+  SLICE_30 SLICE_30( .D1(n3632), .C1(\msecond_cntr[6] ), .D0(n2445), 
+    .C0(\msecond_cntr[5] ), .CIN0(n2445), .CIN1(n3632), .F0(n75_adj_19), 
+    .F1(n74_adj_18), .COUT1(n2447), .COUT0(n3632));
+  SLICE_31 SLICE_31( .DI1(\shiftreg[18].sig_002.FeedThruLUT ), 
+    .DI0(\shiftreg[17].sig_000.FeedThruLUT ), .B1(\shiftreg[18] ), 
+    .D0(\shiftreg[17] ), .CE(n1036), .CLK(pinms_c), .Q0(\daylight_saving[0] ), 
+    .Q1(\daylight_saving[1] ), .F0(\shiftreg[17].sig_000.FeedThruLUT ), 
+    .F1(\shiftreg[18].sig_002.FeedThruLUT ));
+  SLICE_32 SLICE_32( .DI1(\shiftreg[19].sig_085.FeedThruLUT ), 
+    .DI0(\shiftreg[18].sig_001.FeedThruLUT ), .B1(\shiftreg[19] ), 
+    .C0(\shiftreg[18] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[17] ), 
+    .Q1(\shiftreg[18] ), .F0(\shiftreg[18].sig_001.FeedThruLUT ), 
+    .F1(\shiftreg[19].sig_085.FeedThruLUT ));
+  SLICE_35 SLICE_35( .DI1(\shiftreg[22].sig_047.FeedThruLUT ), 
+    .DI0(\shiftreg[21].sig_004.FeedThruLUT ), .C1(\shiftreg[22] ), 
+    .C0(\shiftreg[21] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[21] ), 
+    .Q1(\memreg[22] ), .F0(\shiftreg[21].sig_004.FeedThruLUT ), 
+    .F1(\shiftreg[22].sig_047.FeedThruLUT ));
+  SLICE_36 SLICE_36( .DI1(\n987.sig_016.FeedThruLUT ), 
+    .DI0(\n980.sig_005.FeedThruLUT ), .A1(n987), .B0(n980), .LSR(rst_N_320), 
+    .CLK(\usecond_cntr[11] ), .Q0(n987), .Q1(n986), 
+    .F0(\n980.sig_005.FeedThruLUT ), .F1(\n987.sig_016.FeedThruLUT ));
+  SLICE_38 SLICE_38( .DI1(n33), .DI0(tick_cntr_max_N_319), .D1(\tick_cntr[4] ), 
+    .C1(\tick_cntr[3] ), .B1(tick_cntr_max), .A1(n2379), .D0(n2926), 
+    .C0(\tick_cntr[4] ), .B0(\tick_cntr[0] ), .A0(\tick_cntr[2] ), 
+    .LSR(rst_N_320), .CLK(clk_c), .Q0(tick_cntr_max), .Q1(\tick_cntr[4] ), 
+    .F0(tick_cntr_max_N_319), .F1(n33));
+  SLICE_39 SLICE_39( .DI1(n83), .DI0(msecond_cntr_max_N_324), .B1(n66), 
+    .A1(msecond_cntr_max), .D0(\msecond_cntr[12] ), .C0(\msecond_cntr[2] ), 
+    .B0(n12_adj_2), .A0(n2797), .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q0(msecond_cntr_max), .Q1(\msecond_cntr[14] ), 
+    .F0(msecond_cntr_max_N_324), .F1(n83));
+  SLICE_40 SLICE_40( .DI1(\shiftreg[30].sig_008.FeedThruLUT ), 
+    .DI0(\shiftreg[31].sig_006.FeedThruLUT ), .C1(\shiftreg[30] ), 
+    .A0(\shiftreg[31] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[30] ), 
+    .Q1(\shiftreg[29] ), .F0(\shiftreg[31].sig_006.FeedThruLUT ), 
+    .F1(\shiftreg[30].sig_008.FeedThruLUT ));
+  SLICE_41 SLICE_41( .DI1(\shiftreg[42].sig_009.FeedThruLUT ), 
+    .DI0(\shiftreg[43].sig_007.FeedThruLUT ), .D1(\shiftreg[42] ), 
+    .C0(\shiftreg[43] ), .CE(n1036), .CLK(pinms_c), .Q0(\dow[1] ), 
+    .Q1(\dow[0] ), .F0(\shiftreg[43].sig_007.FeedThruLUT ), 
+    .F1(\shiftreg[42].sig_009.FeedThruLUT ));
+  SLICE_46 SLICE_46( .DI1(n85_2), .DI0(n84), .C1(msecond_cntr_max), 
+    .B1(n68_adj_12), .D0(msecond_cntr_max), .A0(n67_2), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[13] ), .Q1(\msecond_cntr[12] ), .F0(n84), .F1(n85_2));
+  SLICE_48 SLICE_48( .DI1(n87_adj_25), .DI0(n86_adj_24), .D1(n70_adj_14), 
+    .A1(msecond_cntr_max), .D0(msecond_cntr_max), .A0(n69_adj_13), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[11] ), .Q1(\msecond_cntr[10] ), .F0(n86_adj_24), 
+    .F1(n87_adj_25));
+  SLICE_50 SLICE_50( .DI1(n89_adj_27), .DI0(n88_adj_26), .D1(n72_adj_16), 
+    .A1(msecond_cntr_max), .D0(msecond_cntr_max), .C0(n71_adj_15), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[9] ), .Q1(\msecond_cntr[8] ), .F0(n88_adj_26), 
+    .F1(n89_adj_27));
+  SLICE_52 SLICE_52( .DI1(n91_adj_29), .DI0(n90_adj_28), .B1(n74_adj_18), 
+    .A1(msecond_cntr_max), .D0(msecond_cntr_max), .B0(n73_adj_17), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[7] ), .Q1(\msecond_cntr[6] ), .F0(n90_adj_28), 
+    .F1(n91_adj_29));
+  SLICE_54 SLICE_54( .DI1(n93_adj_31), .DI0(n92_adj_30), .D1(n76_adj_20), 
+    .B1(msecond_cntr_max), .C0(msecond_cntr_max), .B0(n75_adj_19), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[5] ), .Q1(\msecond_cntr[4] ), .F0(n92_adj_30), 
+    .F1(n93_adj_31));
+  SLICE_56 SLICE_56( .DI1(n95_adj_33), .DI0(n94_adj_32), .D1(n78_adj_22), 
+    .B1(msecond_cntr_max), .C0(msecond_cntr_max), .B0(n77_adj_21), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[3] ), .Q1(\msecond_cntr[2] ), .F0(n94_adj_32), 
+    .F1(n95_adj_33));
+  SLICE_59 SLICE_59( .DI1(n97_adj_35), .DI0(n96_adj_34), .D1(n80), 
+    .A1(msecond_cntr_max), .C0(n79_adj_23), .B0(msecond_cntr_max), 
+    .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\msecond_cntr[1] ), .Q1(\msecond_cntr[0] ), .F0(n96_adj_34), 
+    .F1(n97_adj_35));
+  SLICE_60 SLICE_60( .DI1(n78), .DI0(n79), .D1(usecond_cntr_max), .C1(n64), 
+    .C0(n65_2), .A0(usecond_cntr_max), .CE(tick_cntr_max), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q0(\usecond_cntr[0] ), .Q1(\usecond_cntr[1] ), .F0(n79), 
+    .F1(n78));
+  SLICE_61 SLICE_61( .DI1(n36), .DI0(n2549), .D1(tick_cntr_max), 
+    .B1(\tick_cntr[1] ), .A1(\tick_cntr[0] ), .D0(\tick_cntr[0] ), 
+    .C0(tick_cntr_max), .LSR(rst_N_320), .CLK(clk_c), .Q0(\tick_cntr[0] ), 
+    .Q1(\tick_cntr[1] ), .F0(n2549), .F1(n36));
+  SLICE_62 SLICE_62( .DI0(n127), .D0(sdcf77_c), .C0(n105), .LSR(rst_N_320), 
+    .CLK(pinms_c), .Q0(n20), .F0(n127));
+  SLICE_63 SLICE_63( .DI1(n54_adj_3), .DI0(n53_2), .D1(sdcf77_c), .C1(n43), 
+    .C0(n42), .A0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt200[8] ), 
+    .Q1(\cnt200[7] ), .F0(n53_2), .F1(n54_adj_3));
+  SLICE_64 SLICE_64( .DI1(n126), .DI0(n61_adj_10), .D1(sdcf77_c), .B1(n104), 
+    .C0(sdcf77_c), .A0(n50), .LSR(rst_N_320), .CLK(pinms_c), .Q0(n9), .Q1(n19), 
+    .F0(n61_adj_10), .F1(n126));
+  SLICE_66 SLICE_66( .DI1(n56_adj_5), .DI0(n55_adj_4), .D1(n45), .A1(sdcf77_c), 
+    .D0(sdcf77_c), .A0(n44), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt200[6] ), 
+    .Q1(\cnt200[5] ), .F0(n55_adj_4), .F1(n56_adj_5));
+  SLICE_68 SLICE_68( .DI1(n58_adj_7), .DI0(n57_adj_6), .D1(sdcf77_c), .A1(n47), 
+    .C0(sdcf77_c), .A0(n46), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt200[4] ), 
+    .Q1(\cnt200[3] ), .F0(n57_adj_6), .F1(n58_adj_7));
+  SLICE_71 SLICE_71( .DI1(n60_adj_9), .DI0(n59_adj_8), .B1(sdcf77_c), .A1(n49), 
+    .C0(n48), .A0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt200[2] ), 
+    .Q1(\cnt200[1] ), .F0(n59_adj_8), .F1(n60_adj_9));
+  SLICE_73 SLICE_73( .DI1(n109), .DI0(n108), .D1(n87), .B1(sdcf77_c), .C0(n86), 
+    .A0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt1500[19] ), 
+    .Q1(\cnt1500[18] ), .F0(n108), .F1(n109));
+  SLICE_75 SLICE_75( .DI1(n111), .DI0(n110), .D1(n89), .B1(sdcf77_c), .D0(n88), 
+    .A0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt1500[17] ), 
+    .Q1(\cnt1500[16] ), .F0(n110), .F1(n111));
+  SLICE_77 SLICE_77( .DI1(n113), .DI0(n112), .D1(sdcf77_c), .A1(n91), 
+    .C0(sdcf77_c), .A0(n90), .LSR(rst_N_320), .CLK(pinms_c), 
+    .Q0(\cnt1500[15] ), .Q1(\cnt1500[14] ), .F0(n112), .F1(n113));
+  SLICE_79 SLICE_79( .DI1(n115), .DI0(n114), .D1(n93), .C1(sdcf77_c), 
+    .D0(sdcf77_c), .A0(n92), .LSR(rst_N_320), .CLK(pinms_c), 
+    .Q0(\cnt1500[13] ), .Q1(\cnt1500[12] ), .F0(n114), .F1(n115));
+  SLICE_81 SLICE_81( .DI1(n117), .DI0(n116), .C1(sdcf77_c), .B1(n95), 
+    .D0(sdcf77_c), .B0(n94), .LSR(rst_N_320), .CLK(pinms_c), 
+    .Q0(\cnt1500[11] ), .Q1(\cnt1500[10] ), .F0(n116), .F1(n117));
+  SLICE_83 SLICE_83( .DI1(n119), .DI0(n118), .B1(n97), .A1(sdcf77_c), .D0(n96), 
+    .B0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt1500[9] ), 
+    .Q1(\cnt1500[8] ), .F0(n118), .F1(n119));
+  SLICE_85 SLICE_85( .DI1(n121), .DI0(n120), .C1(n99), .A1(sdcf77_c), .D0(n98), 
+    .B0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), .Q0(\cnt1500[7] ), 
+    .Q1(\cnt1500[6] ), .F0(n120), .F1(n121));
+  SLICE_87 SLICE_87( .DI1(n123), .DI0(n122), .D1(n101), .A1(sdcf77_c), 
+    .D0(sdcf77_c), .B0(n100), .LSR(rst_N_320), .CLK(pinms_c), 
+    .Q0(\cnt1500[5] ), .Q1(\cnt1500[4] ), .F0(n122), .F1(n123));
+  SLICE_89 SLICE_89( .DI1(n125), .DI0(n124), .D1(n103), .C1(sdcf77_c), 
+    .D0(n102), .B0(sdcf77_c), .LSR(rst_N_320), .CLK(pinms_c), 
+    .Q0(\cnt1500[3] ), .Q1(\cnt1500[2] ), .F0(n124), .F1(n125));
+  SLICE_93 SLICE_93( .DI1(n35), .DI0(n34), .D1(\tick_cntr[1] ), 
+    .C1(\tick_cntr[0] ), .B1(\tick_cntr[2] ), .A1(tick_cntr_max), .D0(n2379), 
+    .C0(tick_cntr_max), .B0(\tick_cntr[3] ), .LSR(rst_N_320), .CLK(clk_c), 
+    .Q0(\tick_cntr[3] ), .Q1(\tick_cntr[2] ), .F0(n34), .F1(n35));
+  SLICE_96 SLICE_96( .DI0(n68), .D0(usecond_cntr_max), .B0(n54), 
+    .CE(tick_cntr_max), .LSR(rst_N_320), .CLK(clk_c), .Q0(\usecond_cntr[11] ), 
+    .F0(n68));
+  SLICE_97 SLICE_97( .DI1(n71), .DI0(n69), .B1(n57), .A1(usecond_cntr_max), 
+    .D0(usecond_cntr_max), .C0(n55), .CE(tick_cntr_max), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q0(\usecond_cntr[10] ), .Q1(\usecond_cntr[8] ), .F0(n69), 
+    .F1(n71));
+  SLICE_100 SLICE_100( .DI1(n73), .DI0(n72), .D1(n59), .A1(usecond_cntr_max), 
+    .D0(n58), .B0(usecond_cntr_max), .CE(tick_cntr_max), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q0(\usecond_cntr[7] ), .Q1(\usecond_cntr[6] ), .F0(n72), 
+    .F1(n73));
+  SLICE_102 SLICE_102( .DI1(n75), .DI0(n74), .D1(usecond_cntr_max), .C1(n61), 
+    .D0(n60), .C0(usecond_cntr_max), .CE(tick_cntr_max), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q0(\usecond_cntr[5] ), .Q1(\usecond_cntr[4] ), .F0(n74), 
+    .F1(n75));
+  SLICE_104 SLICE_104( .DI1(n77), .DI0(n76), .D1(usecond_cntr_max), .B1(n63), 
+    .C0(usecond_cntr_max), .B0(n62), .CE(tick_cntr_max), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q0(\usecond_cntr[3] ), .Q1(\usecond_cntr[2] ), .F0(n76), 
+    .F1(n77));
+  SLICE_107 SLICE_107( .DI1(\n982.sig_011.FeedThruLUT ), 
+    .DI0(\n981.sig_010.FeedThruLUT ), .C1(n982), .A0(n981), .LSR(rst_N_320), 
+    .CLK(\usecond_cntr[11] ), .Q0(n980), .Q1(n981), 
+    .F0(\n981.sig_010.FeedThruLUT ), .F1(\n982.sig_011.FeedThruLUT ));
+  SLICE_109 SLICE_109( .DI1(\n984.sig_013.FeedThruLUT ), 
+    .DI0(\n983.sig_012.FeedThruLUT ), .A1(n984), .C0(n983), .LSR(rst_N_320), 
+    .CLK(\usecond_cntr[11] ), .Q0(n982), .Q1(n983), 
+    .F0(\n983.sig_012.FeedThruLUT ), .F1(\n984.sig_013.FeedThruLUT ));
+  SLICE_111 SLICE_111( .DI1(\n986.sig_015.FeedThruLUT ), 
+    .DI0(\n985.sig_014.FeedThruLUT ), .D1(n986), .A0(n985), .LSR(rst_N_320), 
+    .CLK(\usecond_cntr[11] ), .Q0(n984), .Q1(n985), 
+    .F0(\n985.sig_014.FeedThruLUT ), .F1(\n986.sig_015.FeedThruLUT ));
+  SLICE_114 SLICE_114( .DI1(\shiftreg[56].sig_018.FeedThruLUT ), 
+    .DI0(\shiftreg[57].sig_017.FeedThruLUT ), .A1(\shiftreg[56] ), 
+    .D0(\shiftreg[57] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[57] ), 
+    .Q1(\memreg[56] ), .F0(\shiftreg[57].sig_017.FeedThruLUT ), 
+    .F1(\shiftreg[56].sig_018.FeedThruLUT ));
+  SLICE_116 SLICE_116( .DI1(\shiftreg[54].sig_020.FeedThruLUT ), 
+    .DI0(\shiftreg[55].sig_019.FeedThruLUT ), .B1(\shiftreg[54] ), 
+    .C0(\shiftreg[55] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[55] ), 
+    .Q1(\memreg[54] ), .F0(\shiftreg[55].sig_019.FeedThruLUT ), 
+    .F1(\shiftreg[54].sig_020.FeedThruLUT ));
+  SLICE_118 SLICE_118( .DI1(\shiftreg[52].sig_022.FeedThruLUT ), 
+    .DI0(\shiftreg[53].sig_021.FeedThruLUT ), .A1(\shiftreg[52] ), 
+    .B0(\shiftreg[53] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[53] ), 
+    .Q1(\memreg[52] ), .F0(\shiftreg[53].sig_021.FeedThruLUT ), 
+    .F1(\shiftreg[52].sig_022.FeedThruLUT ));
+  SLICE_120 SLICE_120( .DI1(\shiftreg[50].sig_024.FeedThruLUT ), 
+    .DI0(\shiftreg[51].sig_023.FeedThruLUT ), .B1(\shiftreg[50] ), 
+    .C0(\shiftreg[51] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[51] ), 
+    .Q1(\memreg[50] ), .F0(\shiftreg[51].sig_023.FeedThruLUT ), 
+    .F1(\shiftreg[50].sig_024.FeedThruLUT ));
+  SLICE_122 SLICE_122( .DI1(\shiftreg[48].sig_026.FeedThruLUT ), 
+    .DI0(\shiftreg[49].sig_025.FeedThruLUT ), .B1(\shiftreg[48] ), 
+    .A0(\shiftreg[49] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[49] ), 
+    .Q1(\memreg[48] ), .F0(\shiftreg[49].sig_025.FeedThruLUT ), 
+    .F1(\shiftreg[48].sig_026.FeedThruLUT ));
+  SLICE_124 SLICE_124( .DI1(\shiftreg[46].sig_028.FeedThruLUT ), 
+    .DI0(\shiftreg[47].sig_027.FeedThruLUT ), .B1(\shiftreg[46] ), 
+    .C0(\shiftreg[47] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[47] ), 
+    .Q1(\memreg[46] ), .F0(\shiftreg[47].sig_027.FeedThruLUT ), 
+    .F1(\shiftreg[46].sig_028.FeedThruLUT ));
+  SLICE_126 SLICE_126( .DI1(\shiftreg[41].sig_030.FeedThruLUT ), 
+    .DI0(\shiftreg[45].sig_029.FeedThruLUT ), .C1(\shiftreg[41] ), 
+    .B0(\shiftreg[45] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[45] ), 
+    .Q1(\memreg[41] ), .F0(\shiftreg[45].sig_029.FeedThruLUT ), 
+    .F1(\shiftreg[41].sig_030.FeedThruLUT ));
+  SLICE_128 SLICE_128( .DI1(\shiftreg[39].sig_032.FeedThruLUT ), 
+    .DI0(\shiftreg[40].sig_031.FeedThruLUT ), .D1(\shiftreg[39] ), 
+    .A0(\shiftreg[40] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[40] ), 
+    .Q1(\memreg[39] ), .F0(\shiftreg[40].sig_031.FeedThruLUT ), 
+    .F1(\shiftreg[39].sig_032.FeedThruLUT ));
+  SLICE_130 SLICE_130( .DI1(\shiftreg[37].sig_034.FeedThruLUT ), 
+    .DI0(\shiftreg[38].sig_033.FeedThruLUT ), .D1(\shiftreg[37] ), 
+    .B0(\shiftreg[38] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[38] ), 
+    .Q1(\memreg[37] ), .F0(\shiftreg[38].sig_033.FeedThruLUT ), 
+    .F1(\shiftreg[37].sig_034.FeedThruLUT ));
+  SLICE_132 SLICE_132( .DI1(\shiftreg[34].sig_036.FeedThruLUT ), 
+    .DI0(\shiftreg[36].sig_035.FeedThruLUT ), .D1(\shiftreg[34] ), 
+    .C0(\shiftreg[36] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[36] ), 
+    .Q1(\memreg[34] ), .F0(\shiftreg[36].sig_035.FeedThruLUT ), 
+    .F1(\shiftreg[34].sig_036.FeedThruLUT ));
+  SLICE_134 SLICE_134( .DI1(\shiftreg[32].sig_038.FeedThruLUT ), 
+    .DI0(\shiftreg[33].sig_037.FeedThruLUT ), .B1(\shiftreg[32] ), 
+    .D0(\shiftreg[33] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[33] ), 
+    .Q1(\memreg[32] ), .F0(\shiftreg[33].sig_037.FeedThruLUT ), 
+    .F1(\shiftreg[32].sig_038.FeedThruLUT ));
+  SLICE_136 SLICE_136( .DI1(\shiftreg[30].sig_040.FeedThruLUT ), 
+    .DI0(\shiftreg[31].sig_039.FeedThruLUT ), .D1(\shiftreg[30] ), 
+    .C0(\shiftreg[31] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[31] ), 
+    .Q1(\memreg[30] ), .F0(\shiftreg[31].sig_039.FeedThruLUT ), 
+    .F1(\shiftreg[30].sig_040.FeedThruLUT ));
+  SLICE_138 SLICE_138( .DI1(\shiftreg[27].sig_042.FeedThruLUT ), 
+    .DI0(\shiftreg[29].sig_041.FeedThruLUT ), .C1(\shiftreg[27] ), 
+    .D0(\shiftreg[29] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[29] ), 
+    .Q1(\memreg[27] ), .F0(\shiftreg[29].sig_041.FeedThruLUT ), 
+    .F1(\shiftreg[27].sig_042.FeedThruLUT ));
+  SLICE_140 SLICE_140( .DI1(\shiftreg[25].sig_044.FeedThruLUT ), 
+    .DI0(\shiftreg[26].sig_043.FeedThruLUT ), .B1(\shiftreg[25] ), 
+    .D0(\shiftreg[26] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[26] ), 
+    .Q1(\memreg[25] ), .F0(\shiftreg[26].sig_043.FeedThruLUT ), 
+    .F1(\shiftreg[25].sig_044.FeedThruLUT ));
+  SLICE_142 SLICE_142( .DI1(\shiftreg[23].sig_046.FeedThruLUT ), 
+    .DI0(\shiftreg[24].sig_045.FeedThruLUT ), .B1(\shiftreg[23] ), 
+    .B0(\shiftreg[24] ), .CE(n1036), .CLK(pinms_c), .Q0(\memreg[24] ), 
+    .Q1(\memreg[23] ), .F0(\shiftreg[24].sig_045.FeedThruLUT ), 
+    .F1(\shiftreg[23].sig_046.FeedThruLUT ));
+  SLICE_145 SLICE_145( .DI0(\databit.sig_048.FeedThruLUT ), .B0(databit), 
+    .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[57] ), 
+    .F0(\databit.sig_048.FeedThruLUT ));
+  SLICE_146 SLICE_146( .DI1(\shiftreg[56].sig_050.FeedThruLUT ), 
+    .DI0(\shiftreg[57].sig_049.FeedThruLUT ), .A1(\shiftreg[56] ), 
+    .B0(\shiftreg[57] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[56] ), 
+    .Q1(\shiftreg[55] ), .F0(\shiftreg[57].sig_049.FeedThruLUT ), 
+    .F1(\shiftreg[56].sig_050.FeedThruLUT ));
+  SLICE_147 SLICE_147( .DI0(databit_N_332), .D0(\cnt200[6] ), .C0(\cnt200[8] ), 
+    .B0(n4), .A0(\cnt200[7] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(databit), 
+    .F0(databit_N_332));
+  SLICE_149 SLICE_149( .DI1(\shiftreg[54].sig_052.FeedThruLUT ), 
+    .DI0(\shiftreg[55].sig_051.FeedThruLUT ), .C1(\shiftreg[54] ), 
+    .A0(\shiftreg[55] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[54] ), 
+    .Q1(\shiftreg[53] ), .F0(\shiftreg[55].sig_051.FeedThruLUT ), 
+    .F1(\shiftreg[54].sig_052.FeedThruLUT ));
+  SLICE_151 SLICE_151( .DI1(\shiftreg[52].sig_054.FeedThruLUT ), 
+    .DI0(\shiftreg[53].sig_053.FeedThruLUT ), .A1(\shiftreg[52] ), 
+    .D0(\shiftreg[53] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[52] ), 
+    .Q1(\shiftreg[51] ), .F0(\shiftreg[53].sig_053.FeedThruLUT ), 
+    .F1(\shiftreg[52].sig_054.FeedThruLUT ));
+  SLICE_153 SLICE_153( .DI1(\shiftreg[50].sig_056.FeedThruLUT ), 
+    .DI0(\shiftreg[51].sig_055.FeedThruLUT ), .C1(\shiftreg[50] ), 
+    .C0(\shiftreg[51] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[50] ), 
+    .Q1(\shiftreg[49] ), .F0(\shiftreg[51].sig_055.FeedThruLUT ), 
+    .F1(\shiftreg[50].sig_056.FeedThruLUT ));
+  SLICE_155 SLICE_155( .DI1(\shiftreg[48].sig_058.FeedThruLUT ), 
+    .DI0(\shiftreg[49].sig_057.FeedThruLUT ), .C1(\shiftreg[48] ), 
+    .A0(\shiftreg[49] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[48] ), 
+    .Q1(\shiftreg[47] ), .F0(\shiftreg[49].sig_057.FeedThruLUT ), 
+    .F1(\shiftreg[48].sig_058.FeedThruLUT ));
+  SLICE_157 SLICE_157( .DI1(\shiftreg[46].sig_060.FeedThruLUT ), 
+    .DI0(\shiftreg[47].sig_059.FeedThruLUT ), .C1(\shiftreg[46] ), 
+    .A0(\shiftreg[47] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[46] ), 
+    .Q1(\shiftreg[45] ), .F0(\shiftreg[47].sig_059.FeedThruLUT ), 
+    .F1(\shiftreg[46].sig_060.FeedThruLUT ));
+  SLICE_159 SLICE_159( .DI1(\shiftreg[44].sig_062.FeedThruLUT ), 
+    .DI0(\shiftreg[45].sig_061.FeedThruLUT ), .A1(\shiftreg[44] ), 
+    .B0(\shiftreg[45] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[44] ), 
+    .Q1(\shiftreg[43] ), .F0(\shiftreg[45].sig_061.FeedThruLUT ), 
+    .F1(\shiftreg[44].sig_062.FeedThruLUT ));
+  SLICE_161 SLICE_161( .DI1(\shiftreg[42].sig_064.FeedThruLUT ), 
+    .DI0(\shiftreg[43].sig_063.FeedThruLUT ), .C1(\shiftreg[42] ), 
+    .A0(\shiftreg[43] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[42] ), 
+    .Q1(\shiftreg[41] ), .F0(\shiftreg[43].sig_063.FeedThruLUT ), 
+    .F1(\shiftreg[42].sig_064.FeedThruLUT ));
+  SLICE_163 SLICE_163( .DI1(\shiftreg[40].sig_066.FeedThruLUT ), 
+    .DI0(\shiftreg[41].sig_065.FeedThruLUT ), .A1(\shiftreg[40] ), 
+    .D0(\shiftreg[41] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[40] ), 
+    .Q1(\shiftreg[39] ), .F0(\shiftreg[41].sig_065.FeedThruLUT ), 
+    .F1(\shiftreg[40].sig_066.FeedThruLUT ));
+  SLICE_165 SLICE_165( .DI1(\shiftreg[38].sig_068.FeedThruLUT ), 
+    .DI0(\shiftreg[39].sig_067.FeedThruLUT ), .A1(\shiftreg[38] ), 
+    .A0(\shiftreg[39] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[38] ), 
+    .Q1(\shiftreg[37] ), .F0(\shiftreg[39].sig_067.FeedThruLUT ), 
+    .F1(\shiftreg[38].sig_068.FeedThruLUT ));
+  SLICE_167 SLICE_167( .DI1(\shiftreg[36].sig_070.FeedThruLUT ), 
+    .DI0(\shiftreg[37].sig_069.FeedThruLUT ), .A1(\shiftreg[36] ), 
+    .D0(\shiftreg[37] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[36] ), 
+    .Q1(\shiftreg[35] ), .F0(\shiftreg[37].sig_069.FeedThruLUT ), 
+    .F1(\shiftreg[36].sig_070.FeedThruLUT ));
+  SLICE_169 SLICE_169( .DI1(\shiftreg[34].sig_072.FeedThruLUT ), 
+    .DI0(\shiftreg[35].sig_071.FeedThruLUT ), .C1(\shiftreg[34] ), 
+    .C0(\shiftreg[35] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[34] ), 
+    .Q1(\shiftreg[33] ), .F0(\shiftreg[35].sig_071.FeedThruLUT ), 
+    .F1(\shiftreg[34].sig_072.FeedThruLUT ));
+  SLICE_171 SLICE_171( .DI1(\shiftreg[32].sig_074.FeedThruLUT ), 
+    .DI0(\shiftreg[33].sig_073.FeedThruLUT ), .C1(\shiftreg[32] ), 
+    .C0(\shiftreg[33] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[32] ), 
+    .Q1(\shiftreg[31] ), .F0(\shiftreg[33].sig_073.FeedThruLUT ), 
+    .F1(\shiftreg[32].sig_074.FeedThruLUT ));
+  SLICE_173 SLICE_173( .DI1(\shiftreg[28].sig_076.FeedThruLUT ), 
+    .DI0(\shiftreg[29].sig_075.FeedThruLUT ), .C1(\shiftreg[28] ), 
+    .C0(\shiftreg[29] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[28] ), 
+    .Q1(\shiftreg[27] ), .F0(\shiftreg[29].sig_075.FeedThruLUT ), 
+    .F1(\shiftreg[28].sig_076.FeedThruLUT ));
+  SLICE_175 SLICE_175( .DI1(\shiftreg[26].sig_078.FeedThruLUT ), 
+    .DI0(\shiftreg[27].sig_077.FeedThruLUT ), .A1(\shiftreg[26] ), 
+    .A0(\shiftreg[27] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[26] ), 
+    .Q1(\shiftreg[25] ), .F0(\shiftreg[27].sig_077.FeedThruLUT ), 
+    .F1(\shiftreg[26].sig_078.FeedThruLUT ));
+  SLICE_177 SLICE_177( .DI1(\shiftreg[24].sig_080.FeedThruLUT ), 
+    .DI0(\shiftreg[25].sig_079.FeedThruLUT ), .A1(\shiftreg[24] ), 
+    .C0(\shiftreg[25] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[24] ), 
+    .Q1(\shiftreg[23] ), .F0(\shiftreg[25].sig_079.FeedThruLUT ), 
+    .F1(\shiftreg[24].sig_080.FeedThruLUT ));
+  SLICE_179 SLICE_179( .DI1(\shiftreg[22].sig_082.FeedThruLUT ), 
+    .DI0(\shiftreg[23].sig_081.FeedThruLUT ), .C1(\shiftreg[22] ), 
+    .C0(\shiftreg[23] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[22] ), 
+    .Q1(\shiftreg[21] ), .F0(\shiftreg[23].sig_081.FeedThruLUT ), 
+    .F1(\shiftreg[22].sig_082.FeedThruLUT ));
+  SLICE_181 SLICE_181( .DI1(\shiftreg[20].sig_084.FeedThruLUT ), 
+    .DI0(\shiftreg[21].sig_083.FeedThruLUT ), .C1(\shiftreg[20] ), 
+    .C0(\shiftreg[21] ), .LSR(rst_N_320), .CLK(sdcf77_c), .Q0(\shiftreg[20] ), 
+    .Q1(\shiftreg[19] ), .F0(\shiftreg[21].sig_083.FeedThruLUT ), 
+    .F1(\shiftreg[20].sig_084.FeedThruLUT ));
+  SLICE_184 SLICE_184( .D1(\bcd[0] ), .C1(\bcd[2] ), .B1(\bcd[1] ), 
+    .A1(\bcd[3] ), .D0(n3332), .C0(n1370), .B0(\memreg[21] ), .A0(n1600), 
+    .F0(\bcd[0] ), .F1(segment_c_4));
+  SLICE_185 SLICE_185( .D0(n1602), .C0(n3060), .B0(n1600), .A0(\memreg[50] ), 
+    .F0(n3332));
+  SLICE_186 SLICE_186( .D1(n1602), .C1(n3062), .B1(\memreg[24] ), .A1(n1600), 
+    .D0(n1602), .C0(\memreg[53] ), .A0(n3371), .F0(n3062), .F1(\bcd[3] ));
+  SLICE_188 SLICE_188( .D0(n1600), .C0(n3057), .B0(\memreg[51] ), .A0(n1602), 
+    .F0(n3338));
+  SLICE_189 SLICE_189( .D1(n3338), .C1(n1369), .B1(n1600), .A1(\memreg[22] ), 
+    .D0(n1240), .C0(n1342), .B0(\memreg[26] ), .A0(n986), .F0(n1369), 
+    .F1(\bcd[1] ));
+  SLICE_190 SLICE_190( .D1(n1144), .C1(n3368), .B1(\memreg[39] ), 
+    .A1(\memreg[48] ), .D0(\memreg[32] ), .C0(n1144), .B0(n1613), 
+    .A0(\memreg[57] ), .F0(n3368), .F1(n3371));
+  SLICE_192 SLICE_192( .D1(n1144), .C1(n1613), .B1(\memreg[31] ), 
+    .A1(\memreg[56] ), .D0(n983), .C0(dm2y), .B0(n980), .A0(n985), .F0(n1613), 
+    .F1(n3362));
+  SLICE_193 SLICE_193( .D1(n1602), .C1(n3054), .B1(n1600), .A1(\memreg[52] ), 
+    .D0(\memreg[38] ), .C0(n3362), .B0(n1144), .A0(\memreg[47] ), .F0(n3054), 
+    .F1(n3344));
+  SLICE_194 SLICE_194( .D1(\memreg[46] ), .C1(n3356), .B1(\memreg[37] ), 
+    .A1(n1144), .D0(\memreg[55] ), .C0(n1613), .B0(\memreg[30] ), .A0(n1144), 
+    .F0(n3356), .F1(n3057));
+  SLICE_196 SLICE_196( .D1(\memreg[36] ), .C1(n3350), .B1(n1144), 
+    .A1(\memreg[45] ), .D0(\memreg[54] ), .C0(n1144), .B0(\memreg[29] ), 
+    .A0(n1613), .F0(n3350), .F1(n3060));
+  SLICE_199 SLICE_199( .D1(\bcd[3] ), .C1(\bcd[2] ), .B1(\bcd[1] ), 
+    .A1(\bcd[0] ), .D0(n3090), .C0(n3344), .B0(n1600), .A0(\memreg[23] ), 
+    .F0(\bcd[2] ), .F1(segment_c_6));
+  SLICE_200 SLICE_200( .D1(n982), .C1(\memreg[34] ), .B1(n1221), .A1(n3089), 
+    .B0(dm2y), .A0(\memreg[41] ), .F0(n3089), .F1(n1342));
+  SLICE_203 SLICE_203( .DI1(dm2y_N_335), .D1(dm2y), .B1(msecond_cntr_max), 
+    .C0(dm2y), .B0(n980), .CE(msecond_cntr_14__N_183), .LSR(rst_N_320), 
+    .CLK(clk_c), .Q1(dm2y), .F0(n1240), .F1(dm2y_N_335));
+  SLICE_204 SLICE_204( .D1(\cnt200[3] ), .C1(\cnt200[4] ), .B1(n6), 
+    .A1(\cnt200[5] ), .B0(\cnt200[2] ), .A0(\cnt200[1] ), .F0(n6), .F1(n4));
+  SLICE_206 SLICE_206( .DI1(n70), .C1(usecond_cntr_max), .A1(n56), 
+    .D0(\usecond_cntr[10] ), .C0(pinms_c), .A0(\usecond_cntr[1] ), 
+    .CE(tick_cntr_max), .LSR(rst_N_320), .CLK(clk_c), .Q1(pinms_c), .F0(n2938), 
+    .F1(n70));
+  SLICE_207 SLICE_207( .D1(n2940), .C1(\usecond_cntr[2] ), .B1(n2938), 
+    .A1(\usecond_cntr[3] ), .D0(\usecond_cntr[8] ), .C0(\usecond_cntr[11] ), 
+    .B0(\usecond_cntr[7] ), .A0(\usecond_cntr[4] ), .F0(n2940), .F1(n2944));
+  SLICE_208 SLICE_208( .D0(\msecond_cntr[7] ), .C0(\msecond_cntr[6] ), 
+    .B0(\msecond_cntr[1] ), .F0(n12_adj_36));
+  SLICE_209 SLICE_209( .D1(n12_adj_36), .C1(\msecond_cntr[5] ), 
+    .B1(\msecond_cntr[10] ), .A1(n13), .D0(\msecond_cntr[0] ), 
+    .C0(\msecond_cntr[3] ), .B0(\msecond_cntr[8] ), .A0(\msecond_cntr[14] ), 
+    .F0(n13), .F1(n2797));
+  SLICE_210 SLICE_210( .D1(dm2y), .B1(n985), .A1(n980), .D0(n983), .A0(dm2y), 
+    .F0(n1221), .F1(n1144));
+  SLICE_211 SLICE_211( .D1(\memreg[33] ), .C1(n3074), .B1(n982), .A1(n1221), 
+    .D0(dm2y), .A0(\memreg[40] ), .F0(n3074), .F1(n1343));
+  SLICE_212 SLICE_212( .D1(n987), .C1(n2936), .A1(n27), .D0(n983), .B0(n980), 
+    .A0(dm2y), .F0(n27), .F1(n1600));
+  SLICE_213 SLICE_213( .B1(n986), .A1(\memreg[27] ), .D0(n984), .C0(n986), 
+    .A0(n982), .F0(n2936), .F1(n3090));
+  SLICE_214 SLICE_214( .D1(\memreg[25] ), .C1(n1346), .A1(n986), .D0(dm2y), 
+    .C0(n1343), .B0(\memreg[49] ), .A0(n980), .F0(n1346), .F1(n1370));
+  SLICE_216 SLICE_216( .D1(\cnt1500[8] ), .C1(n12), .B1(\cnt1500[6] ), 
+    .A1(\cnt1500[7] ), .D0(\cnt1500[5] ), .C0(\cnt1500[2] ), .B0(\cnt1500[4] ), 
+    .A0(\cnt1500[3] ), .F0(n12), .F1(n2648));
+  SLICE_218 SLICE_218( .D1(n1744), .C1(n22), .B1(n2660), .A1(\cnt1500[11] ), 
+    .D0(\cnt1500[10] ), .C0(n2648), .B0(\cnt1500[9] ), .F0(n22), 
+    .F1(start_frame_N_329));
+  SLICE_221 SLICE_221( .D1(n987), .C1(n14_adj_11), .B1(n27), .A1(n2936), 
+    .D0(n981), .C0(dm2y), .B0(n983), .F0(n14_adj_11), .F1(n1602));
+  SLICE_222 SLICE_222( .D1(\cnt1500[17] ), .C1(\cnt1500[11] ), 
+    .B1(\cnt1500[19] ), .A1(\cnt1500[15] ), .C0(\cnt1500[17] ), 
+    .A0(\cnt1500[18] ), .F0(n10), .F1(n2932));
+  SLICE_223 SLICE_223( .D1(\cnt1500[19] ), .C1(n14), .B1(\cnt1500[15] ), 
+    .A1(n10), .D0(\cnt1500[14] ), .C0(\cnt1500[13] ), .B0(\cnt1500[16] ), 
+    .A0(\cnt1500[12] ), .F0(n14), .F1(n1744));
+  SLICE_224 SLICE_224( .D1(\cnt1500[7] ), .C1(n2645), .B1(\cnt1500[8] ), 
+    .A1(\cnt1500[10] ), .D0(\cnt1500[2] ), .C0(\cnt1500[5] ), 
+    .B0(\cnt1500[3] ), .A0(\cnt1500[4] ), .F0(n2645), .F1(n10_adj_1));
+  SLICE_226 SLICE_226( .D1(n985), .B1(n1742), .C0(n1742), .A0(n985), 
+    .F0(select7seg_c_2), .F1(select7seg_c_1));
+  SLICE_227 SLICE_227( .D1(n987), .C1(n1322), .B1(n983), .A1(n984), .C0(n980), 
+    .B0(n982), .A0(n981), .F0(n1322), .F1(n1742));
+  SLICE_229 SLICE_229( .D1(n2932), .C1(n2948), .B1(n2934), .A1(sdcf77_c), 
+    .D0(\cnt1500[12] ), .C0(\cnt1500[10] ), .B0(n2648), .A0(\cnt1500[9] ), 
+    .F0(n2948), .F1(n25));
+  SLICE_231 SLICE_231( .D1(n983), .B1(n987), .A1(n1322), .D0(n984), .C0(n987), 
+    .B0(n1322), .A0(n983), .F0(select7seg_c_3), .F1(select7seg_c_4));
+  SLICE_233 SLICE_233( .D0(\bcd[1] ), .C0(\bcd[3] ), .B0(\bcd[0] ), 
+    .A0(\bcd[2] ), .F0(segment_c_1));
+  SLICE_234 SLICE_234( .D1(\bcd[1] ), .C1(\bcd[2] ), .B1(\bcd[3] ), 
+    .A1(\bcd[0] ), .D0(\bcd[2] ), .C0(\bcd[1] ), .B0(\bcd[0] ), .A0(\bcd[3] ), 
+    .F0(segment_c_5), .F1(segment_c_0));
+  SLICE_237 SLICE_237( .D1(\bcd[3] ), .C1(\bcd[1] ), .B1(\bcd[2] ), 
+    .A1(\bcd[0] ), .D0(\bcd[0] ), .C0(\bcd[3] ), .B0(\bcd[1] ), .A0(\bcd[2] ), 
+    .F0(segment_c_2), .F1(segment_c_3));
+  SLICE_238 SLICE_238( .D1(rst_c), .C1(\dow[1] ), .B1(\dow[0] ), .A1(\dow[2] ), 
+    .D0(\dow[1] ), .C0(\dow[0] ), .B0(\dow[2] ), .A0(rst_c), .F0(ledday_c_0), 
+    .F1(ledday_c_2));
+  SLICE_240 SLICE_240( .D1(\dow[1] ), .C1(rst_c), .B1(\dow[0] ), .A1(\dow[2] ), 
+    .D0(\dow[2] ), .C0(\dow[1] ), .B0(rst_c), .A0(\dow[0] ), .F0(ledday_c_5), 
+    .F1(ledday_c_1));
+  SLICE_242 SLICE_242( .D1(\dow[1] ), .C1(rst_c), .B1(\dow[0] ), .A1(\dow[2] ), 
+    .D0(rst_c), .C0(\dow[0] ), .B0(\dow[2] ), .A0(\dow[1] ), .F0(ledday_c_6), 
+    .F1(ledday_c_4));
+  SLICE_247 SLICE_247( .DI1(\start_frame_N_329$n0 ), .D1(n1744), .C1(n2660), 
+    .B1(n22), .A1(\cnt1500[11] ), .D0(\cnt1500[14] ), .C0(\cnt1500[18] ), 
+    .B0(\cnt1500[16] ), .A0(\cnt1500[13] ), .CE(n25), .LSR(rst_N_320), 
+    .CLK(pinms_c), .Q1(sframe_c), .F0(n2934), .F1(\start_frame_N_329$n0 ));
+  SLICE_248 SLICE_248( .D1(n981), .C1(n980), .B1(n987), .D0(n980), .C0(n987), 
+    .B0(n982), .A0(n981), .F0(select7seg_c_5), .F1(select7seg_c_6));
+  SLICE_250 SLICE_250( .D1(rst_c), .C1(\daylight_saving[0] ), 
+    .B1(\daylight_saving[1] ), .C0(\daylight_saving[1] ), 
+    .B0(\daylight_saving[0] ), .A0(rst_c), .F0(cet_c), .F1(cest_c));
+  SLICE_254 SLICE_254( .C0(n10_adj_1), .B0(\cnt1500[9] ), .A0(\cnt1500[6] ), 
+    .F0(n2660));
+  SLICE_256 SLICE_256( .D1(\tick_cntr[1] ), .C1(\tick_cntr[3] ), 
+    .D0(\tick_cntr[0] ), .C0(\tick_cntr[1] ), .A0(\tick_cntr[2] ), .F0(n2379), 
+    .F1(n2926));
+  SLICE_257 SLICE_257( .DI1(usecond_cntr_max_N_322), .D1(\usecond_cntr[6] ), 
+    .C1(\usecond_cntr[5] ), .B1(\usecond_cntr[0] ), .A1(n2944), 
+    .C0(tick_cntr_max), .A0(usecond_cntr_max), .CE(tick_cntr_max), 
+    .LSR(rst_N_320), .CLK(clk_c), .Q1(usecond_cntr_max), 
+    .F0(msecond_cntr_14__N_183), .F1(usecond_cntr_max_N_322));
+  SLICE_260 SLICE_260( .DI1(\shiftreg[44].sig_003.FeedThruLUT ), 
+    .B1(\shiftreg[44] ), .D0(\dow[1] ), .C0(\dow[0] ), .B0(\dow[2] ), 
+    .A0(rst_c), .CE(n1036), .CLK(pinms_c), .Q1(\dow[2] ), .F0(ledday_c_3), 
+    .F1(\shiftreg[44].sig_003.FeedThruLUT ));
+  SLICE_261 SLICE_261( .A1(rst_c), .D0(rst_c), .C0(start_frame_N_329), 
+    .B0(sdcf77_c), .F0(n1036), .F1(rst_N_320));
+  SLICE_262 SLICE_262( .F0(VCC_net));
+  SLICE_265 SLICE_265( .D0(\msecond_cntr[9] ), .C0(\msecond_cntr[4] ), 
+    .B0(\msecond_cntr[11] ), .A0(\msecond_cntr[13] ), .F0(n12_adj_2));
+  SLICE_270 SLICE_270( .C1(n987), .C0(n980), .B0(n987), .F0(select7seg_c_7), 
+    .F1(select7seg_c_0));
+  syncdcf77 syncdcf77( .PADDI(dcf77_c), .CE(pinms_c), .INCLK(clk_c), 
+    .DI0(sdcf77_c));
+  dcf77 dcf77_I( .PADDI(dcf77_c), .dcf77(dcf77));
+  rst rst_I( .PADDI(rst_c), .rst(rst));
+  clk clk_I( .PADDI(clk_c), .clk(clk));
+  cest cest_I( .PADDO(cest_c), .cest(cest));
+  cet cet_I( .PADDO(cet_c), .cet(cet));
+  ledday_0_ \ledday[0]_I ( .PADDO(ledday_c_0), .ledday0(ledday[0]));
+  ledday_1_ \ledday[1]_I ( .PADDO(ledday_c_1), .ledday1(ledday[1]));
+  ledday_2_ \ledday[2]_I ( .PADDO(ledday_c_2), .ledday2(ledday[2]));
+  ledday_3_ \ledday[3]_I ( .PADDO(ledday_c_3), .ledday3(ledday[3]));
+  ledday_4_ \ledday[4]_I ( .PADDO(ledday_c_4), .ledday4(ledday[4]));
+  ledday_5_ \ledday[5]_I ( .PADDO(ledday_c_5), .ledday5(ledday[5]));
+  ledday_6_ \ledday[6]_I ( .PADDO(ledday_c_6), .ledday6(ledday[6]));
+  select7seg_0_ \select7seg[0]_I ( .PADDO(select7seg_c_0), 
+    .select7seg0(select7seg[0]));
+  select7seg_1_ \select7seg[1]_I ( .PADDO(select7seg_c_1), 
+    .select7seg1(select7seg[1]));
+  select7seg_2_ \select7seg[2]_I ( .PADDO(select7seg_c_2), 
+    .select7seg2(select7seg[2]));
+  select7seg_3_ \select7seg[3]_I ( .PADDO(select7seg_c_3), 
+    .select7seg3(select7seg[3]));
+  select7seg_4_ \select7seg[4]_I ( .PADDO(select7seg_c_4), 
+    .select7seg4(select7seg[4]));
+  select7seg_5_ \select7seg[5]_I ( .PADDO(select7seg_c_5), 
+    .select7seg5(select7seg[5]));
+  select7seg_6_ \select7seg[6]_I ( .PADDO(select7seg_c_6), 
+    .select7seg6(select7seg[6]));
+  select7seg_7_ \select7seg[7]_I ( .PADDO(select7seg_c_7), 
+    .select7seg7(select7seg[7]));
+  segment_0_ \segment[0]_I ( .PADDO(segment_c_0), .segment0(segment[0]));
+  segment_1_ \segment[1]_I ( .PADDO(segment_c_1), .segment1(segment[1]));
+  segment_2_ \segment[2]_I ( .PADDO(segment_c_2), .segment2(segment[2]));
+  segment_3_ \segment[3]_I ( .PADDO(segment_c_3), .segment3(segment[3]));
+  segment_4_ \segment[4]_I ( .PADDO(segment_c_4), .segment4(segment[4]));
+  segment_5_ \segment[5]_I ( .PADDO(segment_c_5), .segment5(segment[5]));
+  segment_6_ \segment[6]_I ( .PADDO(segment_c_6), .segment6(segment[6]));
+  sframe sframe_I( .PADDO(sframe_c), .sframe(sframe));
+  sdcf77 sdcf77_I( .PADDO(sdcf77_c), .sdcf77(sdcf77));
+  pinms pinms_I( .PADDO(pinms_c), .pinms(pinms));
+endmodule
+
+module SLICE_0 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, COUT0 );
+  wire   GNDI;
+
+  fa2 usecond_cntr_322_add_4_9( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module fa2 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI0, CI1, output S0, S1, 
+    CO0, CO1 );
+
+  FA2 inst1( .A0(A0), .B0(B0), .C0(C0), .D0(D0), .CI0(CI0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .CI1(CI1), .CO0(CO0), .CO1(CO1), .S0(S0), .S1(S1));
+  defparam inst1.INIT0 = "0xc33c";
+  defparam inst1.INIT1 = "0xc33c";
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module SLICE_1 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_5( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_2 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_3( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_3 ( input D1, C1, B1, CIN1, output F1, COUT1, COUT0 );
+  wire   GNDI, VCCI;
+
+  fa2 msecond_cntr_323_add_4_1( .A0(GNDI), .B0(GNDI), .C0(GNDI), .D0(VCCI), 
+    .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), .S0(), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B1 => COUT1) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module vcc ( output PWR1 );
+
+  VHI INST1( .Z(PWR1));
+endmodule
+
+module SLICE_4 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT0 );
+  wire   GNDI;
+
+  fa2 cnt200_324_add_4_9( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_5 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, COUT0 );
+  wire   GNDI;
+
+  fa2 cnt200_324_add_4_7( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_6 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, COUT0 );
+  wire   GNDI;
+
+  fa2 cnt200_324_add_4_5( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_7 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, COUT0 );
+  wire   GNDI;
+
+  fa2 cnt200_324_add_4_3( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_8 ( input D1, C1, B1, CIN1, output F1, COUT1, COUT0 );
+  wire   GNDI, VCCI;
+
+  fa2 cnt200_324_add_4_1( .A0(GNDI), .B0(GNDI), .C0(GNDI), .D0(VCCI), 
+    .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), .S0(), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B1 => COUT1) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_9 ( input D1, D0, C0, CIN0, CIN1, output F0, COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_21( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(GNDI), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(), 
+    .CO0(COUT0), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_10 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_19( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_11 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_17( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_12 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_15( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_13 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_13( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_14 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_11( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_15 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_9( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_16 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 usecond_cntr_322_add_4_3( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_17 ( input D1, D0, C0, CIN0, CIN1, output F0, COUT0 );
+  wire   GNDI;
+
+  fa2 usecond_cntr_322_add_4_13( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(GNDI), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(), .CO0(COUT0), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_18 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_7( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_19 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_5( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_20 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 cnt1500_325_add_4_3( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), .A1(GNDI), 
+    .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), .S1(F1), 
+    .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_21 ( input D1, C1, B1, CIN1, output F1, COUT1, COUT0 );
+  wire   GNDI, VCCI;
+
+  fa2 cnt1500_325_add_4_1( .A0(GNDI), .B0(GNDI), .C0(GNDI), .D0(VCCI), 
+    .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), .S0(), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B1 => COUT1) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_22 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 usecond_cntr_322_add_4_5( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_23 ( input D1, C1, B1, CIN1, output F1, COUT1, COUT0 );
+  wire   GNDI, VCCI;
+
+  fa2 usecond_cntr_322_add_4_1( .A0(GNDI), .B0(GNDI), .C0(GNDI), .D0(VCCI), 
+    .A1(GNDI), .B1(B1), .C1(C1), .D1(D1), .CI0(VCCI), .CI1(CIN1), .S0(), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B1 => COUT1) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_24 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_15( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1());
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_25 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_13( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_26 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 usecond_cntr_322_add_4_7( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_27 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 usecond_cntr_322_add_4_11( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_28 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_11( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_29 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_9( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_30 ( input D1, C1, D0, C0, CIN0, CIN1, output F0, F1, COUT1, 
+    COUT0 );
+  wire   GNDI;
+
+  fa2 msecond_cntr_323_add_4_7( .A0(GNDI), .B0(GNDI), .C0(C0), .D0(D0), 
+    .A1(GNDI), .B1(GNDI), .C1(C1), .D1(D1), .CI0(CIN0), .CI1(CIN1), .S0(F0), 
+    .S1(F1), .CO0(COUT0), .CO1(COUT1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C1 => COUT1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (C0 => COUT0) = (0:0:0,0:0:0);
+    (CIN0 => COUT0) = (0:0:0,0:0:0);
+    (CIN1 => COUT1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_31 ( input DI1, DI0, B1, D0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_31_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_31_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre2 daylight_saving_i0_i1( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q1));
+  ffsre2 daylight_saving_i0_i0( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(GNDI), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module lut4 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xCCCC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40001 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFF00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module ffsre2 ( input D0, SP, CK, LSR, output Q );
+
+  FD1P3XZ INST01( .D(D0), .SP(SP), .CK(CK), .SR(LSR), .Q(Q));
+  defparam INST01.REGSET = "RESET";
+  defparam INST01.SRMODE = "CE_OVER_LSR";
+endmodule
+
+module SLICE_32 ( input DI1, DI0, B1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut4 SLICE_32_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_32_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i2( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i1( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40002 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF0F0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module ffsre20003 ( input D0, SP, CK, LSR, output Q );
+
+  FD1P3XZ INST01( .D(D0), .SP(SP), .CK(CK), .SR(LSR), .Q(Q));
+  defparam INST01.REGSET = "RESET";
+  defparam INST01.SRMODE = "ASYNC";
+endmodule
+
+module SLICE_35 ( input DI1, DI0, C1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40004 SLICE_35_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_35_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i2( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i1( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module lut40004 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF0F0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_36 ( input DI1, DI0, A1, B0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_36_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_36_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 selector_FSM_i1( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20007 selector_FSM_i0( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40005 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xAAAA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40006 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xCCCC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module ffsre20007 ( input D0, SP, CK, LSR, output Q );
+
+  FD1P3XZ INST01( .D(D0), .SP(SP), .CK(CK), .SR(LSR), .Q(Q));
+  defparam INST01.REGSET = "SET";
+  defparam INST01.SRMODE = "ASYNC";
+endmodule
+
+module SLICE_38 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, A0, LSR, CLK, 
+    output Q0, Q1, F0, F1 );
+  wire   VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40008 i919_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40009 i1889_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 tick_cntr_321__i4( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 tick_cntr_max_c( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40008 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x1320") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40009 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0100") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_39 ( input DI1, DI0, B1, A1, D0, C0, B0, A0, CE, LSR, CLK, 
+    output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40010 i848_2_lut( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40011 i6_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 msecond_cntr_323__i14( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_max_c( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40010 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x4444") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40011 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x4000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_40 ( input DI1, DI0, C1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_40_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_40_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i13( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i14( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40012 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xAAAA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_41 ( input DI1, DI0, D1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40013 SLICE_41_K1( .A(GNDI), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_41_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 dow_i0_i0( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 dow_i0_i1( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module lut40013 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFF00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_46 ( input DI1, DI0, C1, B1, D0, A0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40014 i851_2_lut( .A(GNDI), .B(B1), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40015 i850_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 msecond_cntr_323__i12( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i13( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40014 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0C0C") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40015 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x00AA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_48 ( input DI1, DI0, D1, A1, D0, A0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40016 i853_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40015 i852_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 msecond_cntr_323__i10( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i11( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40016 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5500") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_50 ( input DI1, DI0, D1, A1, D0, C0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40016 i856_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40017 i854_2_lut( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 msecond_cntr_323__i8( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i9( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40017 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x00F0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_52 ( input DI1, DI0, B1, A1, D0, B0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40010 i858_2_lut( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40018 i857_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 msecond_cntr_323__i6( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i7( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40018 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x00CC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_54 ( input DI1, DI0, D1, B1, C0, B0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40019 i860_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40020 i859_2_lut( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 msecond_cntr_323__i4( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i5( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40019 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x3300") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40020 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0C0C") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_56 ( input DI1, DI0, D1, B1, C0, B0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40019 i863_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40020 i862_2_lut( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 msecond_cntr_323__i2( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i3( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_59 ( input DI1, DI0, D1, A1, C0, B0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40016 i865_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40021 i864_2_lut( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 msecond_cntr_323__i0( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 msecond_cntr_323__i1( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40021 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x3030") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_60 ( input DI1, DI0, D1, C1, C0, A0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40022 i933_2_lut( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40023 i834_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 usecond_cntr_322__i1( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 usecond_cntr_322__i0( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40022 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x00F0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40023 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5050") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_61 ( input DI1, DI0, D1, B1, A1, D0, C0, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40024 i922_3_lut( .A(A1), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40025 i1905_2_lut( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 tick_cntr_321__i1( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 tick_cntr_321__i0( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40024 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0066") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40025 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x000F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_62 ( input DI0, D0, C0, LSR, CLK, output Q0, F0 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+
+  lut40017 i855_2_lut( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre20003 cnt1500_325__i1( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_63 ( input DI1, DI0, D1, C1, C0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40026 i869_2_lut( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40027 i868_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 cnt200_324__i8( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt200_324__i9( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40026 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40027 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xA0A0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_64 ( input DI1, DI0, D1, B1, C0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40028 i918_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40029 i861_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 cnt1500_325__i2( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt200_324__i1( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40028 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x00CC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40029 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xA0A0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_66 ( input DI1, DI0, D1, A1, D0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40030 i873_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40031 i872_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt200_324__i6( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt200_324__i7( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40030 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xAA00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40031 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xAA00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_68 ( input DI1, DI0, D1, A1, C0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40032 i875_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40029 i874_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 cnt200_324__i4( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt200_324__i5( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40032 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xAA00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_71 ( input DI1, DI0, B1, A1, C0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40033 i878_2_lut( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40027 i876_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 cnt200_324__i2( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt200_324__i3( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40033 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8888") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_73 ( input DI1, DI0, D1, B1, C0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40019 i880_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40023 i879_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 cnt1500_325__i19( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i20( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_75 ( input DI1, DI0, D1, B1, D0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40019 i882_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40034 i881_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i17( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i18( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40034 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5500") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_77 ( input DI1, DI0, D1, A1, C0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40035 i884_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40036 i883_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 cnt1500_325__i15( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i16( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40035 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x00AA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40036 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0A0A") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_79 ( input DI1, DI0, D1, C1, D0, A0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40037 i886_2_lut( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40015 i885_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i13( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i14( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40037 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_81 ( input DI1, DI0, C1, B1, D0, B0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40014 i888_2_lut( .A(GNDI), .B(B1), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40018 i887_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i11( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i12( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_83 ( input DI1, DI0, B1, A1, D0, B0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40010 i890_2_lut( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40038 i889_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i9( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i10( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40038 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x3300") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_85 ( input DI1, DI0, C1, A1, D0, B0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40039 i913_2_lut( .A(A1), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40038 i912_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i7( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i8( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40039 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5050") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_87 ( input DI1, DI0, D1, A1, D0, B0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40016 i915_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40018 i914_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i5( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i6( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_89 ( input DI1, DI0, D1, C1, D0, B0, LSR, CLK, output Q0, Q1, F0, 
+    F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40037 i917_2_lut( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40038 i916_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 cnt1500_325__i3( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 cnt1500_325__i4( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_93 ( input DI1, DI0, D1, C1, B1, A1, D0, C0, B0, LSR, CLK, 
+    output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40040 i921_3_lut_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40041 i920_3_lut( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre20003 tick_cntr_321__i2( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 tick_cntr_321__i3( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40040 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x1444") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40041 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x030C") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_96 ( input DI0, D0, B0, CE, LSR, CLK, output Q0, F0 );
+  wire   GNDI, DI0_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40018 i923_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre20003 usecond_cntr_322__i11( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_97 ( input DI1, DI0, B1, A1, D0, C0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40010 i926_2_lut( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40017 i924_2_lut( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 usecond_cntr_322__i8( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 usecond_cntr_322__i10( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_100 ( input DI1, DI0, D1, A1, D0, B0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40016 i928_2_lut( .A(A1), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40038 i927_2_lut( .A(GNDI), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 usecond_cntr_322__i6( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 usecond_cntr_322__i7( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_102 ( input DI1, DI0, D1, C1, D0, C0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40022 i930_2_lut( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40042 i929_2_lut( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 usecond_cntr_322__i4( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 usecond_cntr_322__i5( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40042 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_104 ( input DI1, DI0, D1, B1, C0, B0, CE, LSR, CLK, output Q0, Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40028 i932_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40020 i931_2_lut( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 usecond_cntr_322__i2( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  ffsre20003 usecond_cntr_322__i3( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_107 ( input DI1, DI0, C1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_107_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_107_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 selector_FSM_i6( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 selector_FSM_i7( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_109 ( input DI1, DI0, A1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_109_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_109_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 selector_FSM_i4( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 selector_FSM_i5( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_111 ( input DI1, DI0, D1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40013 SLICE_111_K1( .A(GNDI), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_111_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 selector_FSM_i2( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 selector_FSM_i3( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_114 ( input DI1, DI0, A1, D0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40005 SLICE_114_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_114_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre2 memreg__i31( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i32( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_116 ( input DI1, DI0, B1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_116_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_116_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i29( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i30( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_118 ( input DI1, DI0, A1, B0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40005 SLICE_118_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_118_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i27( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i28( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_120 ( input DI1, DI0, B1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_120_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_120_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i25( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i26( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_122 ( input DI1, DI0, B1, A0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_122_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_122_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i23( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i24( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_124 ( input DI1, DI0, B1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_124_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_124_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i21( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i22( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_126 ( input DI1, DI0, C1, B0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40004 SLICE_126_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_126_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i19( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i20( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_128 ( input DI1, DI0, D1, A0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40013 SLICE_128_K1( .A(GNDI), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_128_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i17( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i18( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_130 ( input DI1, DI0, D1, B0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40013 SLICE_130_K1( .A(GNDI), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_130_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i15( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i16( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_132 ( input DI1, DI0, D1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40013 SLICE_132_K1( .A(GNDI), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_132_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i13( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i14( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_134 ( input DI1, DI0, B1, D0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_134_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_134_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre2 memreg__i11( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i12( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_136 ( input DI1, DI0, D1, C0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40013 SLICE_136_K1( .A(GNDI), .B(GNDI), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_136_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i9( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i10( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_138 ( input DI1, DI0, C1, D0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut40004 SLICE_138_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_138_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre2 memreg__i7( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i8( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_140 ( input DI1, DI0, B1, D0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_140_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_140_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre2 memreg__i5( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i6( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_142 ( input DI1, DI0, B1, B0, CE, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, DI0_dly, CE_dly;
+
+  lut4 SLICE_142_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_142_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre2 memreg__i3( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+  ffsre2 memreg__i4( .D0(DI0_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module SLICE_145 ( input DI0, B0, LSR, CLK, output Q0, F0 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+
+  lut40006 SLICE_145_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre20003 shiftreg__11_i41( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_146 ( input DI1, DI0, A1, B0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_146_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_146_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i39( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i40( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_147 ( input DI0, D0, C0, B0, A0, LSR, CLK, output Q0, F0 );
+  wire   VCCI, CLK_NOTIN, DI0_dly, CLK_dly, LSR_dly;
+
+  lut40043 i350_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 databit_c( .D0(DI0_dly), .SP(VCCI), .CK(CLK_NOTIN), .LSR(LSR_dly), 
+    .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (negedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (negedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40043 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFAF8") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module inverter ( input I, output Z );
+
+  INV INST1( .A(I), .Z(Z));
+endmodule
+
+module SLICE_149 ( input DI1, DI0, C1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_149_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_149_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i37( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i38( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_151 ( input DI1, DI0, A1, D0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_151_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_151_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 shiftreg__11_i35( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i36( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_153 ( input DI1, DI0, C1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_153_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_153_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i33( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i34( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_155 ( input DI1, DI0, C1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_155_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_155_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i31( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i32( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_157 ( input DI1, DI0, C1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_157_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_157_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i29( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i30( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_159 ( input DI1, DI0, A1, B0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_159_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40006 SLICE_159_K0( .A(GNDI), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i27( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i28( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_161 ( input DI1, DI0, C1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_161_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_161_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i25( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i26( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_163 ( input DI1, DI0, A1, D0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_163_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_163_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 shiftreg__11_i23( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i24( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_165 ( input DI1, DI0, A1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_165_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_165_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i21( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i22( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_167 ( input DI1, DI0, A1, D0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_167_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40001 SLICE_167_K0( .A(GNDI), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  ffsre20003 shiftreg__11_i19( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i20( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_169 ( input DI1, DI0, C1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_169_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_169_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i17( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i18( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_171 ( input DI1, DI0, C1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_171_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_171_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i15( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i16( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_173 ( input DI1, DI0, C1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_173_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_173_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i11( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i12( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_175 ( input DI1, DI0, A1, A0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_175_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40012 SLICE_175_K0( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i9( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i10( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_177 ( input DI1, DI0, A1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40005 SLICE_177_K1( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_177_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i7( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i8( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_179 ( input DI1, DI0, C1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_179_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_179_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i5( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i6( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_181 ( input DI1, DI0, C1, C0, LSR, CLK, output Q0, Q1, F0, F1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 SLICE_181_K1( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 SLICE_181_K0( .A(GNDI), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20003 shiftreg__11_i3( .D0(DI1_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  ffsre20003 shiftreg__11_i4( .D0(DI0_dly), .SP(VCCI), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module SLICE_184 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40044 i450_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40045 n3332_bdd_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40044 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5753") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40045 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xEE50") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_185 ( input D0, C0, B0, A0, output F0 );
+
+  lut40046 n1602_bdd_4_lut_2( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40046 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xBBC0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_186 ( input D1, C1, B1, A1, D0, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40047 i1773_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40048 i1772_3_lut( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40047 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xE4A0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40048 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF0AA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_188 ( input D0, C0, B0, A0, output F0 );
+
+  lut40049 n1602_bdd_4_lut_3( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40049 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xD8AA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_189 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40050 n3338_bdd_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40051 mux_289_i2_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40050 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xEE30") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40051 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x88D8") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_190 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40052 n3368_bdd_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40053 n1613_bdd_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40052 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF0CA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40053 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xBC8C") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_192 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40054 n1613_bdd_4_lut_4( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40055 i12_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40054 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xACF0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40055 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5C0C") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_193 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40056 n1602_bdd_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40057 n3362_bdd_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40056 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xBBC0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40057 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF2C2") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_194 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40058 n3356_bdd_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40059 n1613_bdd_4_lut_3( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40058 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xE5E0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40059 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF858") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_196 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40060 n3350_bdd_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40061 n1613_bdd_4_lut_2( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40060 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF2C2") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40061 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xEA4A") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_199 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40062 i434_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40063 n3344_bdd_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40062 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x03ED") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40063 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xE3E0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_200 ( input D1, C1, B1, A1, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40064 mux_281_i2_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40065 i1810_2_lut( .A(A0), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40064 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xAA30") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40065 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xBBBB") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_203 ( input DI1, D1, B1, C0, B0, CE, LSR, CLK, output Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40066 dm2y_I_188_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40067 i255_2_lut( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  ffsre20007 dm2y_c( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), 
+    .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40066 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x33CC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40067 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xC0C0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_204 ( input D1, C1, B1, A1, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40068 i1_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40069 i365_2_lut( .A(A0), .B(B0), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40068 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFAEA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40069 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8888") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_206 ( input DI1, C1, A1, D0, C0, A0, CE, LSR, CLK, output Q1, F0, 
+    F1 );
+  wire   GNDI, DI1_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40070 i925_2_lut( .A(A1), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40071 i1679_3_lut( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 usecond_cntr_322__i9( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40070 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0A0A") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40071 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xA000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_207 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40072 i1685_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40073 i1681_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40072 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40073 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_208 ( input D0, C0, B0, output F0 );
+  wire   GNDI;
+
+  lut40074 i4_3_lut( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40074 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF3FF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_209 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40075 i7_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40076 i5_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40075 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40076 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_210 ( input D1, B1, A1, D0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40077 i535_3_lut( .A(A1), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40078 i257_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40077 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xCCEE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40078 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5500") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_211 ( input D1, C1, B1, A1, D0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40079 mux_281_i1_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40031 i1804_2_lut( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40079 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xD1C0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_212 ( input D1, C1, A1, D0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40080 i814_3_lut( .A(A1), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40081 i32_3_lut( .A(A0), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40080 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0005") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40081 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xDD88") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_213 ( input B1, A1, D0, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40033 i1809_2_lut( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40082 i1677_3_lut( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40082 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_214 ( input D1, C1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40083 mux_289_i1_3_lut( .A(A1), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40084 mux_282_i1_3_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40083 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFA50") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40084 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xD8F0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_216 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40085 i3_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40086 i353_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40085 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40086 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFF80") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_218 ( input D1, C1, B1, A1, D0, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40087 start_frame_I_184_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40088 i369_3_lut( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40087 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0072") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40088 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFC00") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_221 ( input D1, C1, B1, A1, D0, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40089 i1_4_lut_adj_3( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40090 i2_3_lut( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40089 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5150") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40090 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0300") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_222 ( input D1, C1, B1, A1, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40091 i1673_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40092 i2_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40091 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40092 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFAFA") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_223 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40093 i7_4_lut_adj_4( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40094 i6_4_lut_adj_2( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40093 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40094 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_224 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40095 i4_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40096 i2_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40095 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40096 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xA080") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_226 ( input D1, B1, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40097 i958_2_lut( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40098 i957_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40097 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFCC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40098 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF5F5") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_227 ( input D1, C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40099 i2_3_lut_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40100 i2_2_lut_3_lut( .A(A0), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40099 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40100 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFEFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_229 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40101 i1912_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40102 i1689_2_lut_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40101 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5554") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40102 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFE0") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_231 ( input D1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40103 i1908_2_lut_4_lut_3_lut_4_lut( .A(A1), .B(B1), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40104 i956_2_lut_4_lut_4_lut_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40103 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xEEFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40104 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFEFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_233 ( input D0, C0, B0, A0, output F0 );
+
+  lut40105 i471_4_lut_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40105 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x025B") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_234 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40106 i949_4_lut_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40107 i435_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40106 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xDFFC") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40107 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x415F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_237 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40108 i451_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40109 i1902_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40108 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0379") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40109 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x001D") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_238 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40110 i1_3_lut_4_lut_4_lut_adj_12( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40111 i1894_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40110 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x40FF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40111 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5575") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_240 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40112 i1_3_lut_4_lut_4_lut_adj_11( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40113 i1_3_lut_4_lut_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40112 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x1F0F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40113 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x7333") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_242 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40114 i1_3_lut_4_lut_4_lut_adj_10( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40115 i1_3_lut_4_lut_4_lut_adj_8( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40114 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F8F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40115 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x80FF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_247 ( input DI1, D1, C1, B1, A1, D0, C0, B0, A0, CE, LSR, CLK, 
+    output Q1, F0, F1 );
+  wire   DI1_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40116 SLICE_247_K1( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40117 i1675_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre20003 start_frame( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40116 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x004E") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40117 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_248 ( input D1, C1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40118 i952_2_lut_4_lut_3_lut( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40119 i953_2_lut_4_lut_4_lut( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40118 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFCFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40119 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFB") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_250 ( input D1, C1, B1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40120 i2_3_lut_adj_7( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40121 i2_3_lut_adj_6( .A(A0), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40120 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x3000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40121 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x2020") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_254 ( input C0, B0, A0, output F0 );
+  wire   GNDI;
+
+  lut40122 i5_3_lut( .A(A0), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40122 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFEFE") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_256 ( input D1, C1, D0, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40123 i1667_2_lut( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40124 i1273_2_lut_3_lut( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40123 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xF000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40124 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xA000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_257 ( input DI1, D1, C1, B1, A1, C0, A0, CE, LSR, CLK, output Q1, 
+    F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40125 i1897_4_lut( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40029 usecond_cntr_max_I_147_2_lut( .A(A0), .B(GNDI), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ffsre20003 usecond_cntr_max_c( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), 
+    .LSR(LSR_dly), .Q(Q1));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (LSR => Q1) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+  endspecify
+
+endmodule
+
+module lut40125 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0002") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_260 ( input DI1, B1, D0, C0, B0, A0, CE, CLK, output Q1, F0, F1 );
+  wire   GNDI, DI1_dly, CLK_dly, CE_dly;
+
+  lut4 SLICE_260_K1( .A(GNDI), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40126 i1_3_lut_4_lut_4_lut_adj_9( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  ffsre2 dow_i0_i2( .D0(DI1_dly), .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), 
+    .Q(Q1));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module lut40126 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x555D") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_261 ( input A1, D0, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40127 rst_I_0_1_lut( .A(A1), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40128 i2_3_lut_adj_5( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40127 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x5555") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40128 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x3000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_262 ( output F0 );
+  wire   GNDI;
+
+  lut40129 i2( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+  endspecify
+
+endmodule
+
+module lut40129 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xFFFF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_265 ( input D0, C0, B0, A0, output F0 );
+
+  lut40130 i5_4_lut_adj_1( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40130 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x8000") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module SLICE_270 ( input C1, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40131 i404_1_lut( .A(GNDI), .B(GNDI), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40132 i1910_2_lut( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40131 ( input A, B, C, D, output Z );
+
+  LUT4 #("0x0F0F") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module lut40132 ( input A, B, C, D, output Z );
+
+  LUT4 #("0xCFCF") INST10( .A(A), .B(B), .C(C), .D(D), .Z(Z));
+endmodule
+
+module syncdcf77 ( input PADDI, CE, INCLK, output DI0 );
+  wire   GNDI, PADDI_dly, INCLK_dly, CE_dly;
+
+  IOL_B_B syncdcf77( .PADDI(PADDI_dly), .DO1(GNDI), .DO0(GNDI), .CE(CE_dly), 
+    .IOLTO(GNDI), .HOLD(GNDI), .INCLK(INCLK_dly), .OUTCLK(GNDI), .PADDO(), 
+    .PADDT(), .DI1(), .DI0(DI0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (INCLK => DI0) = (0:0:0,0:0:0);
+    $setuphold (posedge INCLK, PADDI, 0:0:0, 0:0:0,,,, INCLK_dly, PADDI_dly);
+    $setuphold (posedge INCLK, CE, 0:0:0, 0:0:0,,,, INCLK_dly, CE_dly);
+  endspecify
+
+endmodule
+
+module IOL_B_B ( input PADDI, DO1, DO0, CE, IOLTO, HOLD, INCLK, OUTCLK, 
+    output PADDO, PADDT, DI1, DI0 );
+
+  IOL_B INST10( .PADDI(PADDI), .DO1(DO1), .DO0(DO0), .CE(CE), .IOLTO(IOLTO), 
+    .HOLD(HOLD), .INCLK(INCLK), .OUTCLK(OUTCLK), .PADDO(PADDO), .PADDT(PADDT), 
+    .DI1(DI1), .DI0(DI0));
+  defparam INST10.LATCHIN = "NONE_REG";
+  defparam INST10.DDROUT = "NO";
+endmodule
+
+module dcf77 ( output PADDI, input dcf77 );
+  wire   GNDI;
+
+  BB_B_B \dcf77_pad.bb_inst ( .T_N(GNDI), .I(GNDI), .O(PADDI), .B(dcf77));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (dcf77 => PADDI) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module BB_B_B ( input T_N, I, output O, inout B );
+
+  BB_B INST10( .T_N(T_N), .I(I), .O(O), .B(B));
+endmodule
+
+module rst ( output PADDI, input rst );
+  wire   GNDI;
+
+  BB_B_B \rst_pad.bb_inst ( .T_N(GNDI), .I(GNDI), .O(PADDI), .B(rst));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (rst => PADDI) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module clk ( output PADDI, input clk );
+  wire   GNDI;
+
+  BB_B_B \clk_pad.bb_inst ( .T_N(GNDI), .I(GNDI), .O(PADDI), .B(clk));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (clk => PADDI) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module cest ( input PADDO, output cest );
+  wire   VCCI;
+
+  BB_B_B \cest_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(cest));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => cest) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module cet ( input PADDO, output cet );
+  wire   VCCI;
+
+  BB_B_B \cet_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(cet));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => cet) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_0_ ( input PADDO, output ledday0 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[0].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_1_ ( input PADDO, output ledday1 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[1].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_2_ ( input PADDO, output ledday2 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[2].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday2));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_3_ ( input PADDO, output ledday3 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[3].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday3));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_4_ ( input PADDO, output ledday4 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[4].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday4));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday4) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_5_ ( input PADDO, output ledday5 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[5].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday5));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday5) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module ledday_6_ ( input PADDO, output ledday6 );
+  wire   VCCI;
+
+  BB_B_B \ledday_pad[6].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(ledday6));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => ledday6) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_0_ ( input PADDO, output select7seg0 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[0].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_1_ ( input PADDO, output select7seg1 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[1].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_2_ ( input PADDO, output select7seg2 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[2].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg2));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_3_ ( input PADDO, output select7seg3 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[3].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg3));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_4_ ( input PADDO, output select7seg4 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[4].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg4));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg4) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_5_ ( input PADDO, output select7seg5 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[5].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg5));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg5) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_6_ ( input PADDO, output select7seg6 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[6].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg6));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg6) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module select7seg_7_ ( input PADDO, output select7seg7 );
+  wire   VCCI;
+
+  BB_B_B \select7seg_pad[7].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), 
+    .B(select7seg7));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => select7seg7) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_0_ ( input PADDO, output segment0 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[0].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_1_ ( input PADDO, output segment1 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[1].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_2_ ( input PADDO, output segment2 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[2].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment2));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_3_ ( input PADDO, output segment3 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[3].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment3));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_4_ ( input PADDO, output segment4 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[4].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment4));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment4) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_5_ ( input PADDO, output segment5 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[5].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment5));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment5) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module segment_6_ ( input PADDO, output segment6 );
+  wire   VCCI;
+
+  BB_B_B \segment_pad[6].bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(segment6));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => segment6) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module sframe ( input PADDO, output sframe );
+  wire   VCCI;
+
+  BB_B_B \sframe_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(sframe));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => sframe) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module sdcf77 ( input PADDO, output sdcf77 );
+  wire   VCCI;
+
+  BB_B_B \sdcf77_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(sdcf77));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => sdcf77) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module pinms ( input PADDO, output pinms );
+  wire   VCCI;
+
+  BB_B_B \pinms_pad.bb_inst ( .T_N(VCCI), .I(PADDO), .O(), .B(pinms));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (PADDO => pinms) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule

@@ -1,0 +1,16 @@
+if {![file exists "C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/OuahSim/OuahSim.mpf"]} { 
+	project new "C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/OuahSim" OuahSim
+	project addfile "C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/source/impl_1/ouah.vhd" vhdl
+	vlib  work
+	vdel -lib work -all 
+	vlib work
+
+    vcom -work work "C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/source/impl_1/ouah.vhd"
+} else {
+	project open "C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/OuahSim/OuahSim"
+	project compileoutofdate
+}
+vsim -voptargs=+acc -lib work -L pmi_work -L ovi_ice40up  ouah 
+view wave
+add wave /*
+run 100 ns

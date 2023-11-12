@@ -1,0 +1,19 @@
+Fuse:Fuseholder_TR5_Littelfuse_No560_No460
+TerminalBlock:TerminalBlock_bornier-5_P5.08mm
+R vert Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical
+gonogo-upduino:DIP-48_W17.78mm_LongPads
+Button_Switch_THT:SW_PUSH_6mm
+100nF Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2
+1000uf Capacitor_THT:CP_Radial_D10.0mm_P5.00mm
+TP TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm
+R horiz Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal
+7 seg (cloc 2.0) : 7SegmentLED_LTS6760_LTS6780
+7 sed : Display_7Segment:D1X8K
+jumper : Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
+
+couches 
+Côté composants F-Cu
+Côté Cuivre B-Cu
+Inscriptions F-Silkscreen
+Contour carte Edge.Cuts
+Cotation : User.Eco1

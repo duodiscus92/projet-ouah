@@ -1,0 +1,10 @@
+---------------------------------------------------
+Report for cell ouah
+   Instance path: ouah
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       5.00        100.0
+                                  LUT4	        186        100.0
+                                 IOREG	          5        100.0
+                                 IOBUF	         22        100.0
+                                PFUREG	        105        100.0

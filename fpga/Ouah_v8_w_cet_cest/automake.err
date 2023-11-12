@@ -1,0 +1,1 @@
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v8_w_cet_cest/source/ouah.vhd(58): reset is already declared in this region. VHDL-1223

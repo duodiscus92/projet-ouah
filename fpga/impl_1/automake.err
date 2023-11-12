@@ -1,0 +1,44 @@
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(18): syntax error near ). VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(88): syntax error near end. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(94): type std_logic_vector does not match with the integer literal. VHDL-1278
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(94): type unsigned does not match with the integer literal. VHDL-1278
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(102): syntax error near if. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(102): syntax error near if. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(77): ms is not a signal. VHDL-1236
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(105): pinms with mode 'out' cannot be read. VHDL-1359
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(124): syntax error near &apos;. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(120): cannot read from 'out' object syncdcf77  use 'buffer' or 'inout'. VHDL-1033
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(120): cannot read from 'out' object syncdcf77  use 'buffer' or 'inout'. VHDL-1033
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(130): statement is not synthesizable since it does not hold its value under NOT(clock-edge) condition. VHDL-1242
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(129): statement is not synthesizable since it does not hold its value under NOT(clock-edge) condition. VHDL-1242
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(130): statement is not synthesizable since it does not hold its value under NOT(clock-edge) condition. VHDL-1242
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(131): syntax error near process. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(20): start_minutes is not declared. VHDL-1241
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(21): syntax error near ). VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(160): syntax error near =. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(160): syntax error near =. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(136): syntax error near =. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(143): syntax error near en. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(143): syntax error near process. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(140): statement is not synthesizable since it does not hold its value under NOT(clock-edge) condition. VHDL-1242
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(166): net gnd_2 is constantly driven from multiple places at instance start_frame, on port q. VDB-1000
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(166): net gnd_2 is constantly driven from multiple places at instance start_frame, on port q. VDB-1000
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(144): syntax error near if. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(36): index constraint cannot apply to non array type integer. VHDL-1119
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(203): syntax error near 0. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(186): type std_logic_vector does not match with the integer literal. VHDL-1278
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(232): memtreg is not declared. VHDL-1241
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(24): stdlogic_vector is not declared. VHDL-1241
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(49): syntax error near ;. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(176): syntax error near else. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(179): syntax error near =. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(179): syntax error near =. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(22): sdatabit is not declared. VHDL-1241
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(187): statement is not synthesizable since it does not hold its value under NOT(clock-edge) condition. VHDL-1242
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(23): segment is not declared. VHDL-1241
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(23): segment is not declared. VHDL-1241
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(119): indexed name is not a std_logic_vector. VHDL-1120
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(119): indexed name is not a std_logic_vector. VHDL-1120
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(269): syntax error near &apos;. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(26): syntax error near s8421. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/impl_1/ouah.vhd(27): syntax error near ). VHDL-1261

@@ -1,0 +1,8 @@
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/ouah_v2/ouah.vhd(184): type error near ms  expected type time. VHDL-1272
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/ouah_v2/ouah.vhd(185): syntax error near &lt;. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/ouah_v2/ouah.vhd(185): syntax error near &lt;. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/ouah_v2/ouah.vhd(311): syntax error near when. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/ouah_v2/ouah.vhd(311): syntax error near when. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/source/ouah_v2/ouah.vhd(284): syntax error near then. VHDL-1261
+ERROR - The port [dcf77] cannot be placed in bank [1] based on its IO settings. Please change the port's locate Constraints or IO settings.
+ERROR - The port [dcf77] has an invalid combination of IO settings according to the device specifications. Check the IO settings and correct the errors.

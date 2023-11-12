@@ -1,0 +1,444 @@
+
+map -i "Ouah_Ouah_v3_syn.udb" -pdc "C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/Ouah_v3/source/ouah.pdc" -o "Ouah_Ouah_v3_map.udb" -mp "Ouah_Ouah_v3.mrp" -hierrpt     
+map:  version Radiant Software (64-bit) 3.2.0.18.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:   map -i Ouah_Ouah_v3_syn.udb -pdc C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/Ouah_v3/source/ouah.pdc -o Ouah_Ouah_v3_map.udb -mp Ouah_Ouah_v3.mrp -hierrpt -gui 
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+
+
+
+   Remove unused logic
+
+   Do not produce over sized UDBs.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+
+
+
+Design Summary:
+   Number of slice registers: 137 out of  5280 (3%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           305 out of  5280 (6%)
+      Number of logic LUT4s:             188
+      Number of inserted feedthru LUT4s:  73
+      Number of ripple logic:             22 (44 LUT4s)
+   Number of IO sites used:   32 out of 39 (82%)
+      Number of IO sites used for general PIO: 32
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 32 out of 36 (89%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 32 out of 39 (82%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  3
+      Net pinms_c: 82 loads, 82 rising, 0 falling (Driver: Pin usecond_cntr_592__i9/Q)
+      Net clk_c: 18 loads, 18 rising, 0 falling (Driver: Port clk)
+      Net sdcf77_c: 38 loads, 37 rising, 1 falling (Driver: Pin syncdcf77/DI0)
+   Number of Clock Enables:  3
+      Net n1183: 35 loads, 35 SLICEs
+      Net pinms_c: 1 loads, 0 SLICEs
+      Net tick_cntr_max: 11 loads, 11 SLICEs
+   Number of LSRs:  1
+      Net pb0_N_299: 102 loads, 102 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net pb0_N_299: 102 loads
+      Net n1183: 35 loads
+      Net sframe_c: 32 loads
+      Net n1231: 25 loads
+      Net n1730: 16 loads
+      Net selector_max: 16 loads
+      Net tick_cntr_max: 16 loads
+      Net n1080: 14 loads
+      Net n1081: 12 loads
+      Net n1075: 11 loads
+Running physical design DRC...
+
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 1 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 61 MB
+
+
+par -f "Ouah_Ouah_v3.p2t" "Ouah_Ouah_v3_map.udb" "Ouah_Ouah_v3.udb"
+
+Lattice Place and Route Report for Design "Ouah_Ouah_v3_map.udb"
+Tue Jun  6 21:39:33 2023
+
+PAR: Place And Route Radiant Software (64-bit) 3.2.0.18.0.
+Command Line: par -w -t 1 -cores 1 -pack 0 -exp parPathBased=ON \
+	Ouah_Ouah_v3_map.udb Ouah_Ouah_v3_par.dir/5_1.udb 
+
+Loading Ouah_Ouah_v3_map.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ouah
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Number of Signals: 482
+Number of Connections: 1208
+Device utilization summary:
+
+   SLICE (est.)     154/2640          5% used
+     LUT            305/5280          5% used
+     REG            137/5280          2% used
+   PIO               32/56           57% used
+                     32/36           88% bonded
+   IOLOGIC            1/56            1% used
+   DSP                0/8             0% used
+   I2C                0/2             0% used
+   HFOSC              0/1             0% used
+   LFOSC              0/1             0% used
+   LEDDA_IP           0/1             0% used
+   RGBA_DRV           0/1             0% used
+   FILTER             0/2             0% used
+   SRAM               0/4             0% used
+   WARMBOOT           0/1             0% used
+   SPI                0/2             0% used
+   EBR                0/30            0% used
+   PLL                0/1             0% used
+   RGBOUTBUF          0/3             0% used
+   I3C                0/2             0% used
+   OPENDRAIN          0/3             0% used
+
+Pin Constraint Summary:
+   32 out of 32 pins locked (100% locked).
+
+Finished Placer Phase 0 (HIER). CPU time: 1 secs , REAL time: 2 secs 
+
+
+................
+Finished Placer Phase 0 (AP).  CPU time: 1 secs , REAL time: 2 secs 
+
+Starting Placer Phase 1. CPU time: 1 secs , REAL time: 2 secs 
+..  ..
+....................
+
+Placer score = 67255.
+
+Device SLICE utilization summary after final SLICE packing:
+   SLICE            157/2640          5% used
+
+Finished Placer Phase 1. CPU time: 8 secs , REAL time: 9 secs 
+
+Starting Placer Phase 2.
+.
+
+Placer score =  145374
+Finished Placer Phase 2.  CPU time: 8 secs , REAL time: 9 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clocks :
+  PRIMARY "pb0_N_299" from F1 on comp "SLICE_264" on site "R13C31C", clk load = 0, ce load = 0, sr load = 53
+  PRIMARY "sdcf77_c" from DI0 on comp "syncdcf77" on site "IOL_L19B", clk load = 20, ce load = 0, sr load = 0
+  PRIMARY "clk_c" from comp "clk" on CLK_PIN site "20 (PL20B)", clk load = 10, ce load = 0, sr load = 0
+
+  PRIMARY  : 3 out of 8 (37%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   32 out of 56 (57.1%) I/O sites used.
+   32 out of 36 (88.9%) bonded I/O sites used.
+   Number of I/O comps: 32; differential: 0
+   Number of Vref pins used: 0
+
+I/O Bank Usage Summary:
++----------+----------------+------------+------------+------------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+----------------+------------+------------+------------+
+| 0        | 14 / 14 (100%) | 3.3V       |            |            |
+| 1        | 10 / 14 ( 71%) | 3.3V       |            |            |
+| 2        | 8 / 8 (100%)   | 3.3V       |            |            |
++----------+----------------+------------+------------+------------+
+
+Total Placer CPU time: 8 secs , REAL time: 9 secs 
+
+Writing design to file Ouah_Ouah_v3_par.dir/5_1.udb ...
+
+
+-----------------------------------------------------------------
+INFO - par: ASE feature is off due to non timing-driven settings.  
+-----------------------------------------------------------------
+
+
+Start NBR router at 21:39:42 06/06/23
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in timing report. You should always run the timing    
+      tool to verify your design.                                
+*****************************************************************
+
+Starting routing resource preassignment
+Preassignment Summary:
+--------------------------------------------------------------------------------
+175 connections routed with dedicated routing resources
+3 global clock signals routed
+258 connections routed (of 1071 total) (24.09%)
+---------------------------------------------------------
+Clock routing summary:
+Primary clocks (3 used out of 8 available):
+#0  Signal "clk_c"
+       Clock   loads: 10    out of    10 routed (100.00%)
+#1  Signal "sdcf77_c"
+       Clock   loads: 20    out of    20 routed (100.00%)
+       Data    loads: 0     out of    32 routed (  0.00%)
+#4  Signal "pb0_N_299"
+       Control loads: 53    out of    53 routed (100.00%)
+Other clocks:
+    Signal "pinms_c"
+       Clock   loads: 0     out of    42 routed (  0.00%)
+       Control loads: 0     out of     1 routed (  0.00%)
+       Data    loads: 0     out of     3 routed (  0.00%)
+---------------------------------------------------------
+--------------------------------------------------------------------------------
+Completed routing resource preassignment
+
+Start NBR section for initial routing at 21:39:42 06/06/23
+Level 4, iteration 1
+44(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+
+Info: Initial congestion level at 75.00% usage is 0
+Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 21:39:43 06/06/23
+Level 4, iteration 1
+15(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+Level 4, iteration 2
+12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+Level 4, iteration 3
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+Level 4, iteration 4
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+Level 4, iteration 5
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+
+Start NBR section for post-routing at 21:39:43 06/06/23
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+-----------
+
+
+Total CPU time 1 secs 
+Total REAL time: 0 secs 
+Completely routed.
+End of route.  1071 routed (100.00%); 0 unrouted.
+
+Writing design to file Ouah_Ouah_v3_par.dir/5_1.udb ...
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = <n/a>
+PAR_SUMMARY::Timing score<setup/<ns>> = <n/a>
+PAR_SUMMARY::Worst  slack<hold /<ns>> = <n/a>
+PAR_SUMMARY::Timing score<hold /<ns>> = <n/a>
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  Time: 9 secs 
+Total REAL Time: 10 secs 
+Peak Memory Usage: 90.70 MB
+
+
+par done!
+
+Note: user must run 'timing' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m  -pwrprd -html -rpt "Ouah_Ouah_v3.twr" "Ouah_Ouah_v3.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Ouah_Ouah_v3.twr Ouah_Ouah_v3.udb -gui
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  ouah
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+
+
+
+Successfully loading udb, 0.11 seconds
+
+Initializing timer
+Starting design annotation....
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  103  counted  977  covered  0
+Changing speed to m
+
+Starting full timing analysis...
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 96 MB
+
+ 2.283405s wall, 1.937500s user + 0.328125s system = 2.265625s CPU (99.2%)
+
+
+tmcheck -par "Ouah_Ouah_v3.par" 
+
+bitgen -w "Ouah_Ouah_v3.udb" -f "Ouah_Ouah_v3.t2b" 
+Loading Ouah_Ouah_v3.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ouah
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+
+
+BITGEN: Bitstream Generator Radiant Software (64-bit) 3.2.0.18.0
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "C:\Users\duodi\Documents\Personnel\electronique\fpga-cpld\lattice\Ouah\Ouah_v3\Ouah_Ouah_v3.bin".
+INFO - Bitstream authenticated.
+Bitstream generation complete!
+
+Total CPU Time: 1 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 112 MB
+
+
+ibisgen "Ouah_Ouah_v3.udb" "C:/lscc/radiant/3.2/cae_library/ibis/iCE40UP.ibs"
+IBIS Models Generator: Lattice Radiant Software (64-bit) 3.2.0.18.0
+
+Tue Jun  6 21:39:48 2023
+
+Loading Ouah_Ouah_v3.udb ...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Design:  ouah
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Successfully loading design udb and device data from disks and to up-layer in CPU time: 0 secs , REAL time: 0 secs 
+
+Created design models.
+
+
+Generating: C:\Users\duodi\Documents\Personnel\electronique\fpga-cpld\lattice\Ouah\Ouah_v3\IBIS\Ouah_Ouah_v3.ibs
+
+
+INFO - Design IBIS models are generated for board level analysis.
+
+
+backanno "Ouah_Ouah_v3.udb"  -o "Ouah_Ouah_v3_vo.vo"      -sp "High-Performance_1.2V"  -w -neg
+backanno: version Radiant Software (64-bit) 3.2.0.18.0
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/3.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Loading udb::Database ...
+Design:  ouah
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
+Performance Hardware Data Status:   Advanced       Version 1.0.
+
+
+
+Writing a verilog netlist based on the Ouah_Ouah_v3 design file.
+
+Writing Verilog netlist to file Ouah_Ouah_v3_vo.vo
+Writing SDF timing to file Ouah_Ouah_v3_vo.sdf
+Backanno finished with 0 posted error messages.
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 89 MB

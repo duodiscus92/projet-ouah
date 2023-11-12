@@ -1,0 +1,1 @@
+C:/lscc/radiant/3.2/bin/nt64/moduleparser.exe -PROJ OuahSim -pf C:/lscc/radiant/3.2/cae_library/synthesis/vhdl/iCE40UP.vhd -pf C:/lscc/radiant/3.2/cae_library/synthesis/verilog/iCE40UP.v -lib iCE40UP -lst C:/Users/duodi/Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/OuahSim/source_files.lst

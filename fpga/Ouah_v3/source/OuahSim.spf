@@ -1,0 +1,8 @@
+<RadiantSimulationProject simType="ModelSim" name="OuahSim" path="." version="2.0" language="1" stage="0">
+    <Source type="VHDL" include="none" path="source/impl_1/ouah.vhd" worklib="work" langstandard=""/>
+    <SimLib value="pmi_work ovi_ice40up"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <Udo value=""/>
+    <TopModule instance="" name="ouah" language="VHDL"/>
+</RadiantSimulationProject>

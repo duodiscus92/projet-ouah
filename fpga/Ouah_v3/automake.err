@@ -1,0 +1,4 @@
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v3/source/ouah.vhd(312): character '2' is not in element type std_logic. VHDL-1039
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v3/source/ouah.vhd(292): type integer does not match with a string literal. VHDL-1276
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v3/source/ouah.vhd(275): 0 definitions of operator &quot;mod&quot; match here. VHDL-1052
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v3/source/ouah.vhd(279): character &apos;0&apos; is not in type std_logic_vector. VHDL-1040

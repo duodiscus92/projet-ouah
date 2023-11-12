@@ -1,0 +1,207 @@
+          Lattice Mapping Report File for Design Module 'Ouah_Ouah2'
+
+Target Vendor:        LATTICE
+Target Device:        iCE40UP5KSG48
+Target Performance:   High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
+Mapped on: Mon May 29 15:22:24 2023
+
+Design Information
+------------------
+
+Command line:   map -i Ouah_Ouah2_syn.udb -pdc C:/Users/duodi/Documents/Personne
+     l/electronique/fpga-cpld/lattice/Ouah/source/Ouah2/ouah.pdc -o
+     Ouah_Ouah2_map.udb -mp Ouah_Ouah2.mrp -hierrpt -gui
+
+Design Summary
+--------------
+
+   Number of slice registers: 104 out of  5280 (2%)
+   Number of I/O registers:      5 out of   117 (4%)
+   Number of LUT4s:           179 out of  5280 (3%)
+      Number of logic LUT4s:              78
+      Number of inserted feedthru LUT4s:  54
+      Number of replicated LUT4s:          1
+      Number of ripple logic:             23 (46 LUT4s)
+   Number of IO sites used:   22 out of 39 (56%)
+      Number of IO sites used for general PIO: 22
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 22 out of 36 (61%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 22 out of 39 (56%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  4
+      Net pinms_c: 34 loads, 34 rising, 0 falling (Driver: Pin
+     usecond_cntr_168__i9/Q)
+      Net clk_c: 29 loads, 29 rising, 0 falling (Driver: Port clk)
+      Net msecond_cntr[3]: 4 loads, 4 rising, 0 falling (Driver: Pin
+     msecond_cntr_169__i3/Q)
+      Net sdcf77_c: 38 loads, 38 rising, 0 falling (Driver: Pin syncdcf77/DI0)
+   Number of Clock Enables:  4
+      Net n4: 1 loads, 1 SLICEs
+      Net tick_cntr_max: 11 loads, 11 SLICEs
+      Net msecond_cntr_9__N_155: 11 loads, 11 SLICEs
+      Net pinms_c_enable_4: 17 loads, 13 SLICEs
+   Number of LSRs:  2
+      Net pb0_N_231: 82 loads, 82 SLICEs
+      Net cnt200_8__N_39: 5 loads, 5 SLICEs
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+   Top 10 highest fanout non-clock nets:
+      Net pb0_N_231: 82 loads
+      Net pinms_c_enable_4: 17 loads
+      Net tick_cntr_max: 17 loads
+      Net msecond_cntr_9__N_155: 11 loads
+      Net usecond_cntr_max: 11 loads
+      Net msecond_cntr_max: 10 loads
+      Net n786: 8 loads
+      Net bcd[0]: 7 loads
+      Net bcd[1]: 7 loads
+      Net bcd[2]: 7 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| dcf77               | INPUT     | LVCMOS33  | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| pb0                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clk                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s8421[0]            | OUTPUT    | LVCMOS33  | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s8421[1]            | OUTPUT    | LVCMOS33  | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s8421[2]            | OUTPUT    | LVCMOS33  | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| s8421[3]            | OUTPUT    | LVCMOS33  | O     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[0]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[1]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[2]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[3]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[0]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[1]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[2]          | OUTPUT    | LVCMOS33  |       |       |           |
+
+                                    Page 2
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[3]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[4]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[5]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[6]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdatabit            | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sframe              | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdcf77              | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| pinms               | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i1 was optimized away.
+
+ASIC Components
+---------------
+
+Instance Name: s8421_i0_i4
+         Type: IOLOGIC
+Instance Name: syncdcf77
+         Type: IOLOGIC
+Instance Name: s8421_i0_i3
+         Type: IOLOGIC
+Instance Name: s8421_i0_i2
+         Type: IOLOGIC
+Instance Name: s8421_i0_i1
+         Type: IOLOGIC
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 59 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor
+     Corporation,  All rights reserved.

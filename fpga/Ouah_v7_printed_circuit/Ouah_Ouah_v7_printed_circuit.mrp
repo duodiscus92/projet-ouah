@@ -1,0 +1,207 @@
+ Lattice Mapping Report File for Design Module 'Ouah_Ouah_v7_printed_circuit'
+
+Target Vendor:        LATTICE
+Target Device:        iCE40UP5KSG48
+Target Performance:   High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 3.2.0.18.0
+Mapped on: Sun Aug  6 08:51:39 2023
+
+Design Information
+------------------
+
+Command line:   map -i Ouah_Ouah_v7_printed_circuit_syn.udb -pdc C:/Users/duodi/
+     Documents/Personnel/electronique/fpga-cpld/lattice/Ouah/Ouah_v7_printed_cir
+     cuit/source/ouah.pdc -o Ouah_Ouah_v7_printed_circuit_map.udb -mp
+     Ouah_Ouah_v7_printed_circuit.mrp -hierrpt -gui
+
+Design Summary
+--------------
+
+   Number of slice registers: 145 out of  5280 (3%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:           289 out of  5280 (5%)
+      Number of logic LUT4s:             148
+      Number of inserted feedthru LUT4s:  80
+      Number of replicated LUT4s:          1
+      Number of ripple logic:             30 (60 LUT4s)
+   Number of IO sites used:   28 out of 39 (72%)
+      Number of IO sites used for general PIO: 28
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 28 out of 36 (78%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 28 out of 39 (72%)
+   Number of DSPs:             0 out of 8 (0%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             0 out of 30 (0%)
+   Number of PLLs:             0 out of 1 (0%)
+   Number of Clocks:  3
+      Net sdcf77_c: 38 loads, 37 rising, 1 falling (Driver: Pin syncdcf77/DI0)
+      Net pinms_c: 73 loads, 73 rising, 0 falling (Driver: Pin
+     usecond_cntr_312__i9/Q)
+      Net clk_c: 35 loads, 35 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  5
+      Net n1006: 35 loads, 35 SLICEs
+      Net pinms_c: 1 loads, 0 SLICEs
+      Net msecond_cntr_14__N_177: 17 loads, 17 SLICEs
+      Net tick_cntr_max: 11 loads, 11 SLICEs
+      Net n25: 1 loads, 1 SLICEs
+   Number of LSRs:  1
+      Net pb0_N_309: 110 loads, 110 SLICEs
+   Top 10 highest fanout non-clock nets:
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net pb0_N_309: 110 loads
+      Net n1006: 35 loads
+      Net msecond_cntr_14__N_177: 17 loads
+      Net tick_cntr_max: 17 loads
+      Net msecond_cntr_max: 16 loads
+      Net n950: 11 loads
+      Net usecond_cntr_max: 11 loads
+      Net dm2y: 10 loads
+      Net n957: 10 loads
+      Net pb0_c: 9 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| dcf77               | INPUT     | LVCMOS33  | I     |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| pb0                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clk                 | INPUT     | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[0]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[1]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[2]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[3]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[4]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[5]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ledday[6]           | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[0]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[1]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[2]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[3]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+                                    Page 2
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
+| select7seg[4]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[5]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[6]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| select7seg[7]       | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[0]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[1]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[2]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[3]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[4]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[5]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| segment[6]          | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sframe              | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdcf77              | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| pinms               | OUTPUT    | LVCMOS33  |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i34_1_lut was optimized away.
+Block i1 was optimized away.
+
+ASIC Components
+---------------
+
+Instance Name: syncdcf77
+         Type: IOLOGIC
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs
+   Total REAL Time: 0 secs
+   Peak Memory Usage: 60 MB
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 3
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2022 Lattice Semiconductor
+     Corporation,  All rights reserved.

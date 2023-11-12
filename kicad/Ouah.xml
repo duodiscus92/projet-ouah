@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\duodi\Documents\Personnel\electronique\projet-ouah\Ouah\Ouah.kicad_sch</source>
+    <date>25/08/2023 17:40:24</date>
+    <tool>Eeschema (6.0.8)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Ouah ! (Oh ! Une Autre Horloge)</title>
+        <company>Jacques Ehrlich</company>
+        <rev>1</rev>
+        <date>2023-06-26</date>
+        <source>Ouah.kicad_sch</source>
+        <comment number="1" value="En cas de choc électrique, le concepteur dégage toute responsabilité"/>
+        <comment number="2" value="ATTENTION DANGER PRESENCE DE 220 V SUR LA CARTE."/>
+        <comment number="3" value="Le signal DCF77 provient d'une antenne et d'un démodulateur externes"/>
+        <comment number="4" value="Décodeur et afficheur signaux DCF77 sur FPGA Lattice"/>
+        <comment number="5" value="Carte expérimentale impropre à la commercialisation"/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>470 uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b41321b5-01c1-4603-8967-81e6c7ad518f</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100 nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd1918bb-4f9e-4ad7-863b-799f46b27c29</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100 nF</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15c3840c-0584-490e-b307-826d220702a8</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92a04450-b042-4776-a681-b51e88f889cc</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>Capacitor_THT:C_Rect_L7.2mm_W2.5mm_P5.00mm_FKS2_FKP2_MKS2_MKP2</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6764689f-ac99-4d9b-9da2-bd637bbda5ff</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>B250C1500G</value>
+      <footprint>Diode_THT:Diode_Bridge_Round_D9.8mm</footprint>
+      <datasheet>https://www.vishay.com/docs/88501/b40c1500g.pdf</datasheet>
+      <libsource lib="Diode_Bridge" part="B250C1500G" description="Glass Passivated Single-Phase Bridge Rectifier, 250V Vrms, 1.5A If, WOG package"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4fd2e0d-54b8-4751-871b-dd1d72d66935</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a7ec81b-0ec2-4013-9eb6-4f844f5fdb7c</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>1N4007</value>
+      <footprint>Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</footprint>
+      <datasheet>http://www.vishay.com/docs/88503/1n4001.pdf</datasheet>
+      <libsource lib="Diode" part="1N4007" description="1000V 1A General Purpose Rectifier Diode, DO-41"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e903dc8-a304-4bb7-94ed-9bde8843373d</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e68e7cf0-01a8-4416-bee1-c5b97d96975f</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0504e7c-65ae-4e2f-9446-f85eef663360</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c65d5bb8-f880-46a4-a297-88a1beed76e1</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d49da41-e38b-40d2-b1e6-59aa43c05482</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0d25c75-4f60-4888-81e2-4c4280c27596</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc97b95f-e6c0-48d6-b4ec-0420756a181d</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>654b81ec-821b-408a-abcf-e1d6b73ee505</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70f57288-0279-42ef-ba3c-26ed9dc7a8bf</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c0cdb5df-36c1-48a2-be20-d20870e1504a</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>LED</value>
+      <footprint>LED_THT:LED_D5.0mm</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a2bed3f-224f-4dd1-b8df-d0c437472a15</tstamps>
+    </comp>
+    <comp ref="F1">
+      <value>Fuse_Small</value>
+      <footprint>Fuse:Fuseholder_TR5_Littelfuse_No560_No460</footprint>
+      <libsource lib="Device" part="Fuse_Small" description="Fuse, small symbol"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a1cfc76-a768-4013-a347-8af36cee7cec</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Screw_Terminal_01x05</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-5_P5.08mm</footprint>
+      <libsource lib="Connector" part="Screw_Terminal_01x05" description="Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>54eac72a-9c08-4d0c-aba4-734eddd41156</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Screw_Terminal_01x03</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-3_P5.08mm</footprint>
+      <libsource lib="Connector" part="Screw_Terminal_01x03" description="Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6b54610-832e-4a01-815a-855c287fc041</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>TerminalBlock:TerminalBlock_bornier-2_P5.08mm</footprint>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6d41254-fa70-48df-976a-5317f1d75215</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper_3_Open</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Jumper" part="Jumper_3_Open" description="Jumper, 3-pole, both open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2611eb0b-5bbf-450a-a84d-854070c22e86</tstamps>
+    </comp>
+    <comp ref="JP2">
+      <value>Jumper_3_Open</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Jumper" part="Jumper_3_Open" description="Jumper, 3-pole, both open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>350dd98c-fc14-473d-be2e-28d2f9360444</tstamps>
+    </comp>
+    <comp ref="JP3">
+      <value>Jumper_2_Open</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Jumper" part="Jumper_2_Open" description="Jumper, 2-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>17c9e6c7-ca0e-42d3-b172-8f54907e193c</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f4beeea4-e06e-41bc-954c-5220d613af0b</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9dfd6f2e-81d8-4fbf-96e9-79f0912661b2</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb6ee222-6fd5-4814-8ed0-6bfd0a819a1d</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f8df4e8-dfac-4484-9871-18e8982dfbe9</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9bc2a39e-2308-4bcd-8b66-c2bf22754967</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>719a6c4c-ead4-4326-867c-bf467fd4a092</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>661efb8d-5e64-49a0-b086-e7a544e39599</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3273b59-c530-4479-a068-e9a0ebc6beac</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d07ec01-3347-4ccc-b550-79a7b2b61269</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bffff283-064e-4a0b-95ee-3bdd508f50d7</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>598c54ac-274a-4772-8ff5-c12865eb684f</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ebe36abf-f9d9-4fcd-8108-47f3eae4690e</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31f7cabf-3a5b-4586-9188-d05e093cd48a</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>55937f8f-5f67-42ee-b056-39851de93456</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5a35d81d-80fd-4191-8cbb-a7de6af58d95</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5f1ab4c8-de33-4b91-8749-1dc6cb969aec</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1034d885-a3fb-4034-9a2a-a593fce43d68</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>150</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7826fd55-f9b2-4f54-af0b-f19535e1a902</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>45fee2e3-a0b3-477e-8df0-d32bf8e6b9b5</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>001fb64a-46c1-4915-9e8f-ef758255cc7f</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ca53ed0-a290-4ab6-a664-4fae0e5b23dd</tstamps>
+    </comp>
+    <comp ref="T1">
+      <value>BLOCK VB 1,0/1/9</value>
+      <footprint>Library:Transformer_CHK_EI30-2VA_1xSec_RevEHR</footprint>
+      <libsource lib="Device" part="Transformer_1P_1S" description="Transformer, single primary, single secondary"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0181812e-9210-4915-b412-cf7ff846905d</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ec6ca1a-21be-4726-9e55-e7cd1f9bc84d</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3b6bf1e-5a60-41ac-bbfc-d66eb73d394a</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>16d4df72-6019-4ae4-8aa6-94cf1ac87f89</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>Upduino31-v3</value>
+      <footprint>Library:DIP-48_W17.78mm_LongPads</footprint>
+      <libsource lib="upduino31-v2" part="Upduino31-v2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f9a58d99-c6a3-46f9-9ae5-36facdacdcec</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>TL7705A</value>
+      <footprint>Package_DIP:DIP-8_W7.62mm_Socket_LongPads</footprint>
+      <datasheet>http://www.ti.com.cn/cn/lit/ds/symlink/tl7705a.pdf</datasheet>
+      <libsource lib="Power_Supervisor" part="TL7705A" description="Supply-Voltage Supervisors, 4.55V, PDIP-8/SOIC-8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a0fb5d9-cf2b-4065-94cc-8e9d2d866950</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>LP2950-5.0_TO92</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lp2951.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="LP2950-5.0_TO92" description="Micropower Voltage Regulators with Shutdown, 100mA, Fixed Output 5.0V, TO-92"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4c19b42-7ed2-42b4-a313-d8fa3165035a</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7ad65ae9-0f92-4317-b982-3e3568e3c8d0</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35fc821a-6a24-4669-8bba-e6bec394be38</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e059ccf4-8330-4066-8ebe-d52a3f12dc87</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25868eb0-9d01-4ec2-9695-fe4420eb8775</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e96d7098-721c-40ee-b4ee-919a72eee06b</tstamps>
+    </comp>
+    <comp ref="U9">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>929b1394-fed1-4b49-ab8e-f3f6621d84e4</tstamps>
+    </comp>
+    <comp ref="U10">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c9909b5-2fbe-4f58-b30d-3cf90fad40e8</tstamps>
+    </comp>
+    <comp ref="U11">
+      <value>D168K</value>
+      <footprint>Library:D1X8K_RevEHR</footprint>
+      <datasheet>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</datasheet>
+      <libsource lib="Display_Character" part="D168K" description="One digit 7 segment ultra bright red LED, low current, common cathode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Fichier: Ouah.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c3c4a978-4298-4632-81d7-ed99677a16d8</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Screw_Terminal_01x02">
+      <description>Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x03">
+      <description>Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x03</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x05">
+      <description>Generic screw terminal, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x05</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse_Small">
+      <description>Fuse, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse_Small</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Transformer_1P_1S">
+      <description>Transformer, single primary, single secondary</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">T</field>
+        <field name="Value">Transformer_1P_1S</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AA" type="passive"/>
+        <pin num="2" name="AB" type="passive"/>
+        <pin num="3" name="SA" type="passive"/>
+        <pin num="4" name="SB" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N4007">
+      <description>1000V 1A General Purpose Rectifier Diode, DO-41</description>
+      <docs>http://www.vishay.com/docs/88503/1n4001.pdf</docs>
+      <footprints>
+        <fp>D*DO?41*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4007</field>
+        <field name="Footprint">Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal</field>
+        <field name="Datasheet">http://www.vishay.com/docs/88503/1n4001.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode_Bridge" part="B250C1500G">
+      <description>Glass Passivated Single-Phase Bridge Rectifier, 250V Vrms, 1.5A If, WOG package</description>
+      <docs>https://www.vishay.com/docs/88501/b40c1500g.pdf</docs>
+      <footprints>
+        <fp>D*Bridge*Round*D9.8mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">B250C1500G</field>
+        <field name="Footprint">Diode_THT:Diode_Bridge_Round_D9.8mm</field>
+        <field name="Datasheet">https://www.vishay.com/docs/88501/b40c1500g.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="-" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Display_Character" part="D168K">
+      <description>One digit 7 segment ultra bright red LED, low current, common cathode</description>
+      <docs>https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</docs>
+      <footprints>
+        <fp>D1X8K*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">D168K</field>
+        <field name="Footprint">Display_7Segment:D1X8K</field>
+        <field name="Datasheet">https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="input"/>
+        <pin num="2" name="D" type="input"/>
+        <pin num="3" name="CC" type="input"/>
+        <pin num="4" name="C" type="input"/>
+        <pin num="5" name="DP" type="input"/>
+        <pin num="6" name="B" type="input"/>
+        <pin num="7" name="A" type="input"/>
+        <pin num="8" name="CC" type="input"/>
+        <pin num="9" name="F" type="input"/>
+        <pin num="10" name="G" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_2_Open">
+      <description>Jumper, 2-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_2_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_3_Open">
+      <description>Jumper, 3-pole, both open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*3Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_3_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Supervisor" part="TL7705A">
+      <description>Supply-Voltage Supervisors, 4.55V, PDIP-8/SOIC-8</description>
+      <docs>http://www.ti.com.cn/cn/lit/ds/symlink/tl7705a.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+        <fp>DIP*W7.62mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TL7705A</field>
+        <field name="Datasheet">http://www.ti.com.cn/cn/lit/ds/symlink/tl7705a.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="REF" type="output"/>
+        <pin num="2" name="~{RESIN}" type="input"/>
+        <pin num="3" name="CT" type="passive"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="~{RESET}" type="open_collector"/>
+        <pin num="6" name="RESET" type="open_collector"/>
+        <pin num="7" name="SENSE" type="input"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LP2950-5.0_TO92">
+      <description>Micropower Voltage Regulators with Shutdown, 100mA, Fixed Output 5.0V, TO-92</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lp2951.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LP2950-5.0_TO92</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lp2951.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VO" type="power_out"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="upduino31-v2" part="Upduino31-v2">
+      <fields>
+        <field name="Reference">U1</field>
+        <field name="Value">Upduino31-v3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VIO_BANK_0_2" type="unspecified"/>
+        <pin num="3" name="CREST_N" type="unspecified"/>
+        <pin num="4" name="CDONE" type="unspecified"/>
+        <pin num="5" name="LED_R" type="output"/>
+        <pin num="6" name="LED_G" type="output"/>
+        <pin num="7" name="LED_B" type="output"/>
+        <pin num="8" name="5VD" type="power_in"/>
+        <pin num="9" name="+3,3V" type="power_out"/>
+        <pin num="10" name="GND" type="bidirectional"/>
+        <pin num="11" name="IOT_37A" type="output"/>
+        <pin num="12" name="IOT_36B" type="input"/>
+        <pin num="13" name="IOT_39A" type="input"/>
+        <pin num="14" name="IOT_38B" type="input"/>
+        <pin num="15" name="IOT_43A" type="input"/>
+        <pin num="16" name="IOT_46B_GO" type="input"/>
+        <pin num="17" name="IOT_42B" type="output"/>
+        <pin num="18" name="IOT_45A_G1" type="output"/>
+        <pin num="19" name="IOT_44B" type="output"/>
+        <pin num="20" name="IOT_49A" type="output"/>
+        <pin num="21" name="IOT_48B" type="output"/>
+        <pin num="22" name="IOT_51A" type="output"/>
+        <pin num="23" name="IOT_50B" type="output"/>
+        <pin num="24" name="IOT_41A" type="output"/>
+        <pin num="25" name="IOB_6A" type="input"/>
+        <pin num="26" name="IOB_0A" type="input"/>
+        <pin num="27" name="IOB_2A" type="input"/>
+        <pin num="28" name="IOB_5B" type="input"/>
+        <pin num="29" name="IOB_4A" type="input"/>
+        <pin num="30" name="IOB_9B" type="input"/>
+        <pin num="31" name="IOB_8A" type="input"/>
+        <pin num="32" name="IOB_3B_G6" type="input"/>
+        <pin num="33" name="IOB_13B" type="input"/>
+        <pin num="34" name="IOB_16A" type="input"/>
+        <pin num="35" name="IOB_20A" type="input"/>
+        <pin num="36" name="IOB_31B" type="input"/>
+        <pin num="37" name="IOB_29B" type="input"/>
+        <pin num="38" name="IOB_24A" type="input"/>
+        <pin num="39" name="IOB_23B" type="output"/>
+        <pin num="40" name="IOB_22A" type="output"/>
+        <pin num="41" name="CLK_12M_EXT" type="output"/>
+        <pin num="42" name="GND" type="power_in"/>
+        <pin num="43" name="IOB_18A" type="bidirectional"/>
+        <pin num="44" name="IOB_25B_G3" type="input"/>
+        <pin num="45" name="FLASH_MISO" type="unspecified"/>
+        <pin num="46" name="FLASH_MOSI" type="unspecified"/>
+        <pin num="47" name="FT_SCK" type="unspecified"/>
+        <pin num="48" name="FT_SS_N" type="unspecified"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Diode.kicad_sym</uri>
+    </library>
+    <library logical="Diode_Bridge">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Diode_Bridge.kicad_sym</uri>
+    </library>
+    <library logical="Display_Character">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Display_Character.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Power_Supervisor">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Power_Supervisor.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\6.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+    <library logical="upduino31-v2">
+      <uri>C:/Users/duodi/Documents/Personnel/electronique/projet-ouah/Ouah/upduino31-v2.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="JP2" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="5VD" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="SENSE" pintype="input"/>
+      <node ref="U2" pin="8" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="2" name="+9V">
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="3" name="/+9VBATT">
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="JP3" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="4" name="/CEST">
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="IOB_16A" pintype="input"/>
+    </net>
+    <net code="5" name="/CET">
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="IOB_20A" pintype="input"/>
+    </net>
+    <net code="6" name="/DCF77">
+      <node ref="JP1" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="U1" pin="40" pinfunction="IOB_22A" pintype="output"/>
+    </net>
+    <net code="7" name="/DET_DCF77">
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="IOB_31B" pintype="input"/>
+    </net>
+    <net code="8" name="/R_5V">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="JP2" pin="3" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="9" name="/R_DCF77">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="JP1" pin="3" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="10" name="/S_5V">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="11" name="/S_DCF77">
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="12" name="/TP1">
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="39" pinfunction="IOB_23B" pintype="output"/>
+    </net>
+    <net code="13" name="/TP2">
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="38" pinfunction="IOB_24A" pintype="input"/>
+    </net>
+    <net code="14" name="/TP3">
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="37" pinfunction="IOB_29B" pintype="input"/>
+    </net>
+    <net code="15" name="/cs0">
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="U1" pin="32" pinfunction="IOB_3B_G6" pintype="input"/>
+    </net>
+    <net code="16" name="/cs1">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="31" pinfunction="IOB_8A" pintype="input"/>
+    </net>
+    <net code="17" name="/cs2">
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="30" pinfunction="IOB_9B" pintype="input"/>
+    </net>
+    <net code="18" name="/cs3">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="29" pinfunction="IOB_4A" pintype="input"/>
+    </net>
+    <net code="19" name="/cs4">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="IOB_5B" pintype="input"/>
+    </net>
+    <net code="20" name="/cs5">
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="IOB_2A" pintype="input"/>
+    </net>
+    <net code="21" name="/cs6">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="26" pinfunction="IOB_0A" pintype="input"/>
+    </net>
+    <net code="22" name="/cs7">
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="25" pinfunction="IOB_6A" pintype="input"/>
+    </net>
+    <net code="24" name="/dow0">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="IOB_13B" pintype="input"/>
+    </net>
+    <net code="25" name="/dow1">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="IOT_37A" pintype="output"/>
+    </net>
+    <net code="26" name="/dow2">
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="IOT_36B" pintype="input"/>
+    </net>
+    <net code="27" name="/dow3">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="IOT_39A" pintype="input"/>
+    </net>
+    <net code="28" name="/dow4">
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="IOT_38B" pintype="input"/>
+    </net>
+    <net code="29" name="/dow5">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="IOT_43A" pintype="input"/>
+    </net>
+    <net code="30" name="/dow6">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="IOT_46B_GO" pintype="input"/>
+    </net>
+    <net code="32" name="/seg0">
+      <node ref="U1" pin="17" pinfunction="IOT_42B" pintype="output"/>
+      <node ref="U10" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U11" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U4" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U5" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U6" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U7" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U8" pin="7" pinfunction="A" pintype="input"/>
+      <node ref="U9" pin="7" pinfunction="A" pintype="input"/>
+    </net>
+    <net code="33" name="/seg1">
+      <node ref="U1" pin="18" pinfunction="IOT_45A_G1" pintype="output"/>
+      <node ref="U10" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U11" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U4" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U5" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U6" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U7" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U8" pin="6" pinfunction="B" pintype="input"/>
+      <node ref="U9" pin="6" pinfunction="B" pintype="input"/>
+    </net>
+    <net code="34" name="/seg2">
+      <node ref="U1" pin="19" pinfunction="IOT_44B" pintype="output"/>
+      <node ref="U10" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U11" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U4" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U5" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U6" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U7" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U8" pin="4" pinfunction="C" pintype="input"/>
+      <node ref="U9" pin="4" pinfunction="C" pintype="input"/>
+    </net>
+    <net code="35" name="/seg3">
+      <node ref="U1" pin="20" pinfunction="IOT_49A" pintype="output"/>
+      <node ref="U10" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U11" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U4" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U5" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U6" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U7" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U8" pin="2" pinfunction="D" pintype="input"/>
+      <node ref="U9" pin="2" pinfunction="D" pintype="input"/>
+    </net>
+    <net code="36" name="/seg4">
+      <node ref="U1" pin="21" pinfunction="IOT_48B" pintype="output"/>
+      <node ref="U10" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U11" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U4" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U5" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U6" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U7" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U8" pin="1" pinfunction="E" pintype="input"/>
+      <node ref="U9" pin="1" pinfunction="E" pintype="input"/>
+    </net>
+    <net code="37" name="/seg5">
+      <node ref="U1" pin="22" pinfunction="IOT_51A" pintype="output"/>
+      <node ref="U10" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U11" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U4" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U5" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U6" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U7" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U8" pin="9" pinfunction="F" pintype="input"/>
+      <node ref="U9" pin="9" pinfunction="F" pintype="input"/>
+    </net>
+    <net code="38" name="/seg6">
+      <node ref="U1" pin="23" pinfunction="IOT_50B" pintype="output"/>
+      <node ref="U10" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U11" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U4" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U5" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U6" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U7" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U8" pin="10" pinfunction="G" pintype="input"/>
+      <node ref="U9" pin="10" pinfunction="G" pintype="input"/>
+    </net>
+    <net code="39" name="/seg7">
+      <node ref="U1" pin="24" pinfunction="IOT_41A" pintype="output"/>
+      <node ref="U10" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U11" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U4" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U5" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U6" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U7" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U8" pin="5" pinfunction="DP" pintype="input"/>
+      <node ref="U9" pin="5" pinfunction="DP" pintype="input"/>
+    </net>
+    <net code="41" name="/{slash}MR">
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="~{RESIN}" pintype="input"/>
+    </net>
+    <net code="42" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="D1" pin="3" pinfunction="-" pintype="passive"/>
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D11" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D12" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D13" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="43" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="44" name="Net-(C4-Pad1)">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="REF" pintype="output"/>
+    </net>
+    <net code="45" name="Net-(C5-Pad1)">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="CT" pintype="passive"/>
+    </net>
+    <net code="46" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pintype="passive"/>
+      <node ref="T1" pin="3" pinfunction="SA" pintype="passive"/>
+    </net>
+    <net code="47" name="Net-(D1-Pad4)">
+      <node ref="D1" pin="4" pintype="passive"/>
+      <node ref="T1" pin="4" pinfunction="SB" pintype="passive"/>
+    </net>
+    <net code="48" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="JP3" pin="2" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="49" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="50" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="51" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="52" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="53" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="54" name="Net-(D9-Pad2)">
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+    </net>
+    <net code="55" name="Net-(D10-Pad2)">
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="56" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+    </net>
+    <net code="57" name="Net-(D12-Pad2)">
+      <node ref="D12" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="58" name="Net-(D13-Pad2)">
+      <node ref="D13" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="59" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(F1-Pad2)">
+      <node ref="F1" pin="2" pintype="passive"/>
+      <node ref="T1" pin="2" pinfunction="AB" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(J2-Pad3)">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="T1" pin="1" pinfunction="AA" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U4" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="63" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U5" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="64" name="Net-(R4-Pad2)">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U6" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="65" name="Net-(R5-Pad1)">
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U7" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U7" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="66" name="Net-(R9-Pad2)">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U8" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U8" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="67" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U9" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U9" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="68" name="Net-(R14-Pad2)">
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="U10" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U10" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="69" name="Net-(R15-Pad2)">
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U11" pin="3" pinfunction="CC" pintype="input"/>
+      <node ref="U11" pin="8" pinfunction="CC" pintype="input"/>
+    </net>
+    <net code="70" name="Net-(R19-Pad2)">
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="U1" pin="43" pinfunction="IOB_18A" pintype="bidirectional"/>
+      <node ref="U2" pin="5" pinfunction="~{RESET}" pintype="open_collector"/>
+    </net>
+    <net code="71" name="Net-(R20-Pad1)">
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="RESET" pintype="open_collector"/>
+    </net>
+    <net code="72" name="Net-(U1-Pad41)">
+      <node ref="U1" pin="41" pinfunction="CLK_12M_EXT" pintype="output"/>
+      <node ref="U1" pin="44" pinfunction="IOB_25B_G3" pintype="input"/>
+    </net>
+    <net code="73" name="unconnected-(J2-Pad2)">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U1-Pad2)">
+      <node ref="U1" pin="2" pinfunction="VIO_BANK_0_2" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U1-Pad3)">
+      <node ref="U1" pin="3" pinfunction="CREST_N" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U1-Pad4)">
+      <node ref="U1" pin="4" pinfunction="CDONE" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U1-Pad5)">
+      <node ref="U1" pin="5" pinfunction="LED_R" pintype="output+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U1-Pad6)">
+      <node ref="U1" pin="6" pinfunction="LED_G" pintype="output+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U1-Pad7)">
+      <node ref="U1" pin="7" pinfunction="LED_B" pintype="output+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U1-Pad9)">
+      <node ref="U1" pin="9" pinfunction="+3,3V" pintype="power_out+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U1-Pad10)">
+      <node ref="U1" pin="10" pinfunction="GND" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U1-Pad42)">
+      <node ref="U1" pin="42" pinfunction="GND" pintype="power_in+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U1-Pad45)">
+      <node ref="U1" pin="45" pinfunction="FLASH_MISO" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U1-Pad46)">
+      <node ref="U1" pin="46" pinfunction="FLASH_MOSI" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U1-Pad47)">
+      <node ref="U1" pin="47" pinfunction="FT_SCK" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(U1-Pad48)">
+      <node ref="U1" pin="48" pinfunction="FT_SS_N" pintype="unspecified+no_connect"/>
+    </net>
+  </nets>
+</export>

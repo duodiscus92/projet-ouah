@@ -1,0 +1,4 @@
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v6_vero_dmy/source/ouah.vhd(321): syntax error near when. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v6_vero_dmy/source/ouah.vhd(322): this construct is only supported in VHDL 1076-2008. VHDL-1576
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v6_vero_dmy/source/ouah.vhd(323): syntax error near -. VHDL-1261
+ERROR - c:/users/duodi/documents/personnel/electronique/fpga-cpld/lattice/ouah/ouah_v6_vero_dmy/source/ouah.vhd(119): syntax error near =. VHDL-1261

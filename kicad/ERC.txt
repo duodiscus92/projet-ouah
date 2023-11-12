@@ -1,0 +1,14 @@
+Rapport ERC (11/07/2023 11:59:32, Encodage UTF8)
+
+***** Feuille /
+[lib_symbol_issues]: Symbol 'Upduino31-v2' has been modified in library 'upduino31-v2'.
+    ; Severity: warning
+    @(44,45 mm, 35,56 mm): Symbole U1 [Upduino31-v2]
+[power_pin_not_driven]: Pin entrée de puissance connectée à d'autres pins, mais aucune pin en sortie de puissance pour la piloter
+    ; Severity: error
+    @(102,87 mm, 132,08 mm): Symbole U3 [LP2950-5.0_TO92] Pin 3 [VI, Power input, Ligne]
+[power_pin_not_driven]: Pin entrée de puissance connectée à d'autres pins, mais aucune pin en sortie de puissance pour la piloter
+    ; Severity: error
+    @(110,49 mm, 139,70 mm): Symbole U3 [LP2950-5.0_TO92] Pin 2 [GND, Power input, Ligne]
+
+** messages ERC: 3  Erreurs 2  Avertissements 1
