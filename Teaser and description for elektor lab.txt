@@ -1,0 +1,19 @@
+Teaser : 
+Ouah! (Wow!) No, this is not a project to imitate a dog's bark.
+Ouah! is in French, the ironic acronym for “Oh, Une Autre Horloge!” ("Wow, another clock!").
+Ouah! is a clock that decodes the DCF77 signal. 
+Its originality is that it is 100% hardware implemented on an FPGA using the Upduino 31 board.
+
+Description
+
+This project is a DCF77 clock realised 100% by hardware. It is implemented on an FPGA and described in VHDL. This realisation does not include the receiver and the demodulator of the DCF77 signal. It concerns exclusively the decoding of the signal available at the output of the demodulator and its display on 7 segments and LEDs of the hours, minutes, month, day of the month, year, day of
+the week and daylight saving (CEST/CEST) time. A printed circuit is also proposed.
+
+DCF77 receiver-demodulators are readily available on the market. But in France, reception of
+DCF77 signals transmitted from Germany is difficult outdoors due to the low power received and almost
+impossible indoors. Also, for the development of OUAH! did I need a DCF77 signal simulator. This simulator, written in C, implemented on Raspberry Pico W can be integrated in the same enclosure as the Ouah! Thus the clock can be used outdoor with the DCF77 receiver or indoor with the simulator provided that the Pico W is within the range of a Wi-Fi network.
+
+The clock includes also a 220v power supply and If the mains is temporarily disconnected, a 9V battery  (6x1,5v AAA batteries) can take over.
+
+Project's Github :
+https://github.com/duodiscus92/projet-ouah

@@ -14,4 +14,6 @@ You will find here, all requested files to buid the ouah! project
 - souces C files for Raspbery Pi (A Zero W is enough to execute the simulator)
 - source C files for Pico W (only requested if you decide to integer the simulator into the clock)
 I recommend to visit periodically the gihub of this project to get the last updates if any.
-I will soon open a dedicated email adress for a light support and to get your suggestions for improvment.
+
+I can provide ligth support and collect remarks and suggestions on this mail:
+mailto:support.ouah@orange.fr
